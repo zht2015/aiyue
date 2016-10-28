@@ -1,0 +1,195 @@
+
+
+<div class="login-reg-wrap">
+  <div class="login-reg-box">
+      <div class="reg-box">
+         <div class="reg-main">
+          <ul class="regcut-btn">
+          <li class="cur">个人用户</li>
+          <li>出版社用户</li>
+          </ul>
+ 
+<div class="zc-switch-box">
+  <div class="qy-each-input">
+    <input type="text" class="input" placeholder="手机号码" id="phone">
+
+  </div>
+  <div class="qy-each-input">
+    <input type="text" class="input" placeholder="用户名" id="userName1">
+
+  </div>
+  <div class="qy-each-input">
+    <input type="password" class="input" placeholder="密码" id="password1">
+
+  </div>
+  <div class="qy-each-input">
+    <input type="text" class="input yzm" placeholder="验证码" id="verifyCode">
+    <a href="javascript:void(0);" class="send-btn" id="btnSendCode" onclick="sendVerifyCode()">发送验证码到手机</a> 
+
+ 
+  </div>
+  <div class="zddl">
+    <input type="checkbox" class="ck" id="xy_user" checked="checked">
+    我同意《<a href="#" class="xy">爱阅基金-网站服务协议</a>》 </div>
+  <button type="button" class="dl-btn btn-user" onclick="userRegister()">立即注册</button>
+</div> 
+
+<div class="zc-switch-box">
+  <div class="qy-each-input">
+    <input type="text" class="input" placeholder="用户名" id="userName2">
+
+  </div>
+  <div class="qy-each-input">
+    <input type="text" class="input" placeholder="单位" id="press">
+
+  </div>
+  <div class="qy-each-input">
+    <input type="password" class="input" placeholder="密码" id="password2">
+
+  </div>
+  <div class="zddl">
+    <input type="checkbox" class="ck" checked="checked">
+    我同意《<a href="#" class="xy">爱阅基金-网站服务协议</a>》 </div>
+  <button type="button" class="dl-btn" onclick="pressRegister()">立即注册</button>
+</div>  
+   </div>
+      </div>
+    <img src="__PUBLIC__/Home/images2/reg-icon.jpg" class="bg">
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+    var InterValObj; //timer变量，控制时间
+    var count = 200; //间隔函数，1秒执行
+    var curCount;//当前剩余秒数
+
+    var license =$("#xy_user").is(':checked');
+    if(!license){
+      $(".btn-user").attr("disabled",true);
+      $(".btn-user").css("background","#ccc");
+    }else{
+      $(".btn-user").attr("disabled",false);
+      $(".btn-user").css("background","#ff9600");
+    }
+ 
+
+  $(".btn-user").click(function(){
+    var license =$("#xy_user").is(':checked');
+    if(!license){
+      $(".btn-user").attr("disabled",true);
+      $(".btn-user").css("background","#ccc");
+    }else{
+      $(".btn-user").attr("disabled",false);
+      $(".btn-user").css("background","#ff9600");
+    }
+  });
+
+   function sendVerifyCode (){
+      var phone=$("#phone").val();
+      if(phone==""){layer.tips('手机号码不能为空', '#phone');return false}
+      //验证手机号码格式
+      var pattern = /^1[34578]\d{9}$/; 
+      if(!pattern.test(phone)){layer.tips("手机号码格式不正确", '#phone');return false;}
+      
+      $.post("{{:U('Home/Users/sendMsg')}}", {"phone":phone,"templateId":30746,"type":"register"}, function(data){
+                
+                if(data.status==1){
+                  //200s内禁止发送
+                   /* layer.tips(data.message, '#verifyCode', {
+                       tips: [1, '#F90'],
+                       time: 1000
+                   });*/
+
+                    curCount = count;
+                    $("#btnSendCode").attr("disabled", "true");
+                    //$("#btnSendCode").attr("background", "#ccc");
+                    $("#btnSendCode").html(curCount + "秒后可重发验证码");
+                    InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+
+                }else if(data.status==-1){
+                   layer.tips(data.message, '#verifyCode', {
+                       tips: [1, '#F90'],
+                       time: 1000
+                   });
+                }else if(data.status==-2){
+                  //手机号码校验失败
+                   layer.tips(data.message, '#phone', {
+                       tips: [1, '#F90'],
+                       time: 1000
+                   });
+                }
+          
+      });
+   
+    }
+    //timer处理函数
+    function SetRemainTime() {
+        if (curCount == 0) {                
+            window.clearInterval(InterValObj);//停止计时器
+            $("#btnSendCode").removeAttr("disabled");//启用按钮
+            $("#btnSendCode").html("重新发送验证码");
+        }
+        else {
+            curCount--;
+            $("#btnSendCode").html(curCount + "秒后可重发验证码");
+        }
+    }
+
+    function userRegister(){
+      var phone=$("#phone").val();
+      var userName=$("#userName1").val();
+      var password=$("#password1").val();
+      var verifyCode=$("#verifyCode").val();
+
+     
+      if(phone==""){layer.tips('手机号码不能为空', '#phone');return false}
+      if(userName==""){layer.tips('帐号不能为空', '#userName1');return false}
+      if(password==""){layer.tips('密码不能为空', '#password1');return false}
+      if(verifyCode==""){layer.tips('验证码不能为空', '#verifyCode');return false}
+      $.post("{{:U('Home/Users/userRegister')}}",{"phone":phone,"userName":userName,"password":password,"verifyCode":verifyCode,"type":1},function(data) {          
+            if(data.status==1){
+              location.href="{{:U('Users/registerSuccess')}}";               
+            }else if(data.status==-1){
+               layer.tips(data.message, '#verifyCode', {
+                   tips: [1, '#F90'],
+                   time: 1000
+               });
+            }else if(data.status==-2){
+              layer.msg("注册失败",{icon:5});
+            }else if(data.status==0){
+              layer.tips(data.message, '#phone');return false;
+            }else if(data.status==-3){
+              layer.tips(data.message, '#userName1');return false;
+            }
+        });    
+    }
+
+    function pressRegister(){
+      var userName=$("#userName2").val();
+      var press=$("#press").val();
+      var password=$("#password2").val();
+
+      if(userName==""){layer.tips('用户名不能为空', '#userName2');return false}
+      if(press==""){layer.tips('单位不能为空', '#press');return false}
+      if(password==""){layer.tips('密码不能为空', '#password2');return false}
+
+      $.post("{{:U('Home/Users/userRegister')}}",{"userName":userName,"password":password,"press":press,"type":2},function(data) {          
+            if(data.status==1){
+              location.href="__CONTROLLER__/tjzl/id/"+data.id;               
+            }else if(data.status==-1){
+               layer.tips(data.message, '#userName2');return false;
+            }else if(data.status==-2){
+              layer.tips(data.message, '#press');return false;
+            }else if(data.status==-3){
+              layer.tips(data.message, '#password2');return false;
+            }else if(data.status==-4){
+              layer.msg("注册失败",{icon:5});
+            }
+        });
+
+
+    }
+ 
+</script>
+

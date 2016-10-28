@@ -1,0 +1,88 @@
+<?php
+/**
+ * 购物车模块
+ * User: Mr.苏
+ * Date: 2016/6/12
+ * Time: 14:09
+ */
+namespace Home\Action;
+class CartsAction extends CommonAction{
+    public function index(){
+        /**获取购物车**/
+        $m = D('Home/Carts');
+        $cartInfo=$m->getCart();
+        $count = count($cartInfo);
+        /**获取商品**/
+        $article = D('Home/Article');
+        for($i=0;$i<$count;$i++){
+           $cartInfo[$i]['goods'] = $article->getArticle($cartInfo[$i]['article_id'])[0];
+         }
+         //dump($cartInfo);
+        $this->assign("info",$cartInfo);
+        $this->display();
+    }
+    /**添加到购物车**/
+    public function addCart(){
+        $m  = M("carts");
+        $rs = array("status"=>-1);
+        $userId    = $_SESSION['USERS']['id'];
+        $articleId = $_POST['id'];
+        $number    = $_POST['number'];
+        
+        /*查询购物车*/
+        $getCart=$m->where(array("user_id"=>$userId,"article_id"=>$articleId))->find();
+        /**如果数据存在只增加数量**/
+        if($getCart>=1){
+            $reNumber['number'] = $number+$getCart['number'];
+            $query=$m->where(array("id"=>$getCart['id']))->save($reNumber);
+            if($query!==false){
+                $rs['status']=1;
+            }
+        }else{
+            $data=array();
+            $data['user_id']=$userId;
+            $data['article_id']=$articleId;
+            $data['number']=$number;
+            $query=$m->add($data);
+            if($query){
+                $rs['status']=1;
+            }
+        }
+        $this->ajaxReturn($rs);
+    }
+
+    /**删除购物车商品**/
+    public function delCart(){
+        $m = M("carts");
+        $rs = array("status"=>-1);
+        $cartId = $_POST['id'];
+        $flag   = $_POST['flag'];
+        /**标识为1等于单个删除 为2批量删除**/
+        if($flag==1){
+            $query = $m->where(array("id"=>$cartId))->delete();
+            if($query){
+              $rs['status']=1;
+            }
+        }else{
+            $id = substr($cartId,0,-1);
+            $query = $m->where("id in($id)")->delete();
+            if($query){
+                $rs['status']=1;
+            }
+        }
+        $this->ajaxReturn($rs);
+    }
+    /**修改购物车商品数量**/
+    public function changeCartNumber(){
+        $m      = M("carts");
+        $id     = $_POST['id'];
+        $number = $_POST['number'];
+        $rs = $m->where("id=".$id)->setField("number",$number);
+    }
+    /**获取购物车的数量**/
+    public function getCartsNumber(){
+        $userId = $_SESSION['USERS']['id'];
+        $m = M("carts")->where("user_id=".$userId)->count();
+        $this->ajaxReturn($m);
+    }
+}

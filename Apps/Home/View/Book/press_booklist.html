@@ -1,0 +1,324 @@
+	<script type="text/javascript" src="__PUBLIC__/Home/webuploader/webuploader.min.js"></script>
+	<div class="main clearfix">
+		<include file='Public/left' />
+
+		<div class="main-right">
+			<div class="right-top">
+				<div class="top-inner w740">
+					<p class="top-text"><img src="__PUBLIC__/Home/images/icon/personal06.png" alt="">您已制作了 <span class="orange">10</span> 份书单<a href="#" class="white-note" id="make-new-booklist">制作新的书单</a><a href="#" class="white-note" id="one-click-upload">一键上传表格</a></p>
+					<div class="search-inp">
+						<input type="text" placeholder="搜索书单名称"><a href="#"></a>
+					</div>
+				</div>
+			</div>
+			<div class="right-inner result-inner w740">
+				<div class="result-title">全部书单 > 关于 “<span class="orange">孩子</span>” 的搜索结果</div>
+				<div class="search-result sd">
+					<ul>
+						<foreach name="bookListInfo" item="vo">
+						<li class="clearfix">
+							<span class="pic02"><img src="{{$vo.booklist_cover}}" alt=""></span>
+							<div class="note-info">
+								<a href="#">书单名称：《{{$vo.booklist_name}}》</a>
+								<span class="note-date">创建日期：{{$vo.c_time}}</span>
+							</div>
+							<div class="sd-praise">
+								<span class="sd-praise1">点赞数：<span class="orange">115</span></span>
+								<span class="sd-praise2">收藏数：<span class="orange">115</span></span>
+							</div>
+							<span class="edit-del"><a href="#">编辑</a> / <a href="#">删除</a></span>
+						</li>
+						</foreach>
+					</ul>
+				</div>
+				<div class="page">
+					{{$show}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--弹窗 遮罩 制作新的书单-->
+	<div class="mask"></div>
+	<div class="pop book01-pop">
+		<div class="book01-inner">
+			<div class="book01-top"><img src="__PUBLIC__/Home/images/icon/book06.png" alt="">请输入您的书单资料</div>
+			<input type="text" placeholder="动物科普童话，小孩子小学读的书单" class="input01" id="booklist_name">
+			<span class="span01"></span>
+			<div class="book01-file clearfix">
+				<input type="text" placeholder="上传书单封面" id="booklist_cover">
+				<!-- <span class="book01-span"><input type="file"></span> -->
+				<span class="book01-span"><div id="filePicker2">&nbsp;&nbsp;</div></span>
+			</div>
+			<span class="span02">输入标签：</span>
+			<div class="book01-dui clearfix">
+				<input type="text" placeholder="最多5个标签，单个不超过8个字" id="booktag">
+				<span></span>
+			</div>
+			<div class="wdbq clearfix">
+				<ul>
+					
+				</ul>
+			</div>
+			<span class="span03">推荐标签：</span>
+			<div class="tjbq clearfix">
+				<ul>
+					<li><span>儿童教育</span></li>
+					<li><span>神话</span></li>
+					<li><span>经济</span></li>
+					<li><span>管理培训</span></li>
+					<li><span>自然</span></li>
+					<li><span>人文社科</span></li>
+					<li><span>大百科</span></li>
+					<li><span>小说</span></li>
+				</ul>
+			</div>
+			<textarea name="" class="book01-text" placeholder="请输入书单描述，不超过200字" id="booklist_discription"></textarea>
+			<textarea name="" class="book01-text" placeholder="推荐理由（可不填）" id="recomend"></textarea>
+			<a href="javascript:void(0);" class="scsd" onclick="makeBookList()">生成书单</a>
+			<a href="#" class="book01-close"></a>
+		</div>
+	</div>
+
+	<!--弹窗 遮罩 一键上传书单-->
+	<div class="mask"></div>
+	<div class="pop yjsc">
+		<h5><img src="__PUBLIC__/Home/images/icon/yjsc01.png" alt="">一键上传书单</h5>
+		<div class="yjsc-input">
+			<input type="text" placeholder="上传格式为EXCEL" id="excel-path">
+			<span class="file-excel" id="filePicker"><!-- <input type="file"> --></span>
+			
+		</div>
+		<a href="javascript:void(0);" class="wcsc" onclick="upload();">完成上传</a>
+		<a href="/Public/booklist.xls" class="down-mb"><img src="__PUBLIC__/Home/images/icon/yjsc02.png" alt="">请先下载模板</a>
+		<a href="#" class="pop-close"></a>
+	</div>
+
+	<script>
+
+		/**左侧导航**/
+		$('.personal ul li').removeClass('cur-li');
+		$('.personal04').addClass('cur-li');
+		/*触发弹窗*/
+		$("#make-new-booklist").click(function(){
+			$(".mask").show();
+			$('.book01-pop').show();
+			
+		});
+
+		$("#one-click-upload").click(function(){
+			$(".mask").show();
+			$('.yjsc').show();
+		});
+
+		$('#booktag').bind('keypress',function(event){
+			var booktag=$("#booktag").val();console.log(booktag);
+			if(event.keyCode == "13"){
+				if(booktag!=""){
+					var lilength = $(".wdbq ul li").length;
+					if(lilength>4){layer.tips('标签超过5个', '.wdbq');return false}
+            		if(booktag.length>8){layer.tips('标签长度超过8个字', '#booktag');return false}
+                	$(".wdbq ul").append("<li><span>"+booktag+"</span></li>");
+                	
+                	$(".wdbq ul").trigger("create");
+            	}
+			}
+            
+        });
+
+        /**推荐标签**/
+        $('.tjbq li').live('hover',function(event){
+            $(this).toggleClass('bq-del');
+        });
+        $('.tjbq li').live('click',function(){
+        	var lilength = $(".wdbq ul li").length;
+			if(lilength>4){layer.tips('标签超过5个', '.wdbq');return false}			
+        	var tag = $(this).children("span").html();
+        	$(".wdbq ul").append("<li><span>"+tag+"</span></li>"); 
+            $(this).remove();
+        })
+
+        function makeBookList(){
+        	var booklist_name = $("#booklist_name").val();
+        	var booklist_cover = $("#booklist_cover").val();
+        	var booklist_discription = $("#booklist_discription").val();
+        	var recomend = $("#recomend").val();
+        	var tag = "";
+        	$(".wdbq ul li").each(function(){
+        		   tag += $(this).text()+","
+        	});
+        	tag=tag.substring(0,tag.length-1);
+        	if(booklist_name==""){layer.tips("书单名称不能为空","#booklist_name");return false}
+        	if(booklist_cover==""){layer.tips("请上传书单封面","#booklist_cover");return false}
+        	if(booklist_discription==""){layer.tips("书单描述不能为空","#booklist_discription");return false}
+
+            $.post("{{:U('Home/Book/makeBookList')}}",{"booklist_name":booklist_name,"booklist_cover":booklist_cover,"booklist_discription":booklist_discription,"recomend":recomend,"booklist_tag":tag},function(data) {
+            	console.log("ccc");
+            	if(data.status==1){
+            		layer.msg('书单制作成功', {icon: 6});
+            		location.href="{{:U('Home/Book/press_booklist')}}";
+            	}else if(data.status==-1){
+            		layer.msg('书单制作失败', {icon: 5});
+            	}
+        	});
+        }
+
+
+		function upload(){
+			var file= $("#excel-path").val();
+			if(file==""){layer.tips("请上传EXCEL文件", '#filePicker');return false;}
+
+			$.post("{{:U('Book/importBooklist')}}", {"file":file,"flag":0}, function(data){
+				console.log("cg");
+			})
+		}
+	</script>
+	<style type="text/css">
+	  .webuploader-container {
+	    position: relative;
+	  }
+	  .webuploader-element-invisible {
+	    position: absolute !important;
+	    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	      clip: rect(1px,1px,1px,1px);
+	  }
+	  .webuploader-pick {
+	    position: relative;
+	    display: inline-block;
+	    cursor: pointer;
+	    /*background: #00b7ee;*/
+	    padding: 10px 15px;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 3px;
+	    overflow: hidden;
+	  }
+	  .webuploader-pick-hover {
+	   /* background: #00a2d4;*/
+	  }
+
+	  .webuploader-pick-disable {
+	    opacity: 0.6;
+	    pointer-events:none;
+	  }
+	</style>
+
+	<script type="text/javascript">
+	  $(document).ready(function(){
+	      // 初始化Web Uploader
+	       var index = 0;
+	      var uploader = WebUploader.create({
+
+	          // 选完文件后，是否自动上传。
+	          auto: true,
+
+	          // swf文件路径
+	          swf: "__PUBLIC__/Home/webuploader/uploader.swf",
+
+	          // 文件接收服务端。
+	          server: "{{:U('Book/uploadFile')}}",
+
+	          // 选择文件的按钮。可选。
+	          // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+	          pick: '#filePicker',
+
+	          // 只允许选择图片文件。
+	          /*accept: {
+	              	title: 'intoTypes',
+                	extensions: 'xls,xlsx',
+                	mimeTypes: '.xls,.xlsx'
+	          }*/
+	      });
+
+
+	    // 当有文件添加进来的时候
+	          uploader.on('fileQueued', function (file) {
+	          });
+	          // 文件上传过程中
+	          uploader.on('uploadProgress', function (file, percentage) {
+	              index = layer.load();
+	          });
+
+
+	          // 文件上传成功
+	          uploader.on('uploadSuccess', function (file, data) {
+	              if (data.status){
+	                  var img_url = data.savepath;
+	                  $('#excel-path').val(img_url);
+	                  layer.close(index);
+	              } else{
+	                  layer.msg(data.msg, {icon: 5});
+	              }
+	          });
+
+	          // 文件上传失败，现实上传出错。
+	          uploader.on('uploadError', function (file) {
+	              layer.msg('上传失败，请重试', {icon: 5});
+	          });
+	          // 完成上传完了，成功或者失败，先删除进度条。
+	          uploader.on('uploadComplete', function (file) {
+	              layer.close(index);
+	          });
+	      });
+	</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+			    // 初始化Web Uploader
+			     var index = 0;
+			    var uploader2 = WebUploader.create({
+
+			        // 选完文件后，是否自动上传。
+			        auto: true,
+
+			        // swf文件路径
+			        swf: "__PUBLIC__/Home/webuploader/uploader.swf",
+
+			        // 文件接收服务端。
+			        server: "{{:U('Book/uploadcover')}}",
+
+			        // 选择文件的按钮。可选。
+			        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+			        pick: '#filePicker2',
+
+			        // 只允许选择图片文件。
+			        accept: {
+			            title: 'Images',
+			            extensions: 'gif,jpg,jpeg,bmp,png',
+			            mimeTypes: 'image/*'
+			        }
+			    });
+
+
+				// 当有文件添加进来的时候
+	            uploader2.on('fileQueued', function (file) {
+	            });
+	            // 文件上传过程中
+	            uploader2.on('uploadProgress', function (file, percentage) {
+	                index = layer.load();
+	            });
+
+	            // 文件上传成功
+	            uploader2.on('uploadSuccess', function (file, data) {
+	                if (data.status){
+	                    var img_url = (data.savepath + 'thumb_' + data.savename).substr(1);
+	                    console.log(img_url);
+	                    $('#booklist_cover').val(img_url);
+	                    
+	                    layer.close(index);
+	                } else{
+	                    layer.msg('上传失败，请重试', {icon: 5});
+	                }
+	            });
+
+	            // 文件上传失败，现实上传出错。
+	            uploader2.on('uploadError', function (file) {
+	                layer.msg('上传失败，请重试', {icon: 5});
+	            });
+	            // 完成上传完了，成功或者失败，先删除进度条。
+	            uploader2.on('uploadComplete', function (file) {
+	                layer.close(index);
+	            });
+	        });
+		</script>

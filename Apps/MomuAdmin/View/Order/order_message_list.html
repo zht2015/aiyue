@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>物流配送</title>
+    <link href="__PUBLIC__/Admin/scripts/artdialog/ui-dialog.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/Admin/skin/default/style.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/Admin/css/pagination.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/artdialog/dialog-plus-min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/js/laymain.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/js/common.js"></script>
+</head>
+
+<body class="mainbody">
+<form method="post" action="{{:U('Order/order_message_list')}}" id="form1">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+        <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['form1'];
+        if (!theForm) {
+            theForm = document.form1;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        window.onload = function(){
+            $('#PageContent a').click(function(){
+                var href = $(this).attr('href');
+                $("#form1").attr("action", href);
+                $("#form1").submit();
+                return false;
+            });
+
+        }
+        //]]>
+        
+      //操作提示框
+        showResult("{{$result}}","");
+    </script>
+
+
+    <script src="/WebResource.axd?d=BWdn8Xktanz87Tq3-YeSkM510uTqdL17nXm3nJtAjmqayqEa1ByMTawvJM-XUFzLg-QGWsvACZBTQp6gI6regqmXOkjmGYpvkGcfGZheexE1&amp;t=635748791385434505" type="text/javascript"></script>
+
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F6383FE7" />
+    </div>
+    <!--导航栏-->
+    <div class="location">
+        <a href="javascript:history.back(-1);" class="back"><i></i><span>返回上一页</span></a>
+        <a href="{{:U('Index/center')}}" class="home"><i></i><span>首页</span></a>
+        <i class="arrow"></i>
+        <span>订单管理</span>
+        <i class="arrow"></i>
+        <span>取消订单原因列表</span>
+    </div>
+    <!--/导航栏-->
+
+    <!--工具栏-->
+    <div id="floatHead" class="toolbar-wrap">
+        <div class="toolbar">
+            <div class="box-wrap">
+                <a class="menu-btn"></a>
+                <div class="l-list">
+                    <ul class="icon-list">
+                        <li><a class="add" href="{{:U('Order/order_message_edit')}}"><i></i><span>新增</span></a></li>
+                        <li><a class="all" href="javascript:;" onclick="checkAll(this);"><i></i><span>全选</span></a></li>
+                        <li><a onclick="return ExePostBack(&#39;btnDelete&#39;);" id="btnDelete" class="del" href="javascript:__doPostBack(&#39;btnDelete&#39;,&#39;&#39;)"><i></i><span>删除</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/工具栏-->
+
+    <!--列表-->
+    <div class="table-container">
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ltable">
+            <tr>
+                <th width="8%">选择</th>
+                <th align="left" width="300">内容</th>
+                <th width="300">类型</th>
+                <th width="300">是否启用</th>
+                <th width="10%">操作</th>
+            </tr>
+            <foreach name="pageData" key="k" item="expressV">
+                <tr>
+                    <td align="center">
+                        <span class="checkall" style="vertical-align:middle;"><input id="rptList_chkId_{{$k}}" type="checkbox" name="rptList$ctl$chkId[{{$k}}]" /></span>
+                        <input type="hidden" name="rptList$ctl$hidId[{{$k}}]" id="rptList_hidId_{{$k}}" value="{{$expressV.id}}" />
+                    </td>
+                    <td><a href="{{:U('Order/order_edit_message',array('id'=>$expressV['id'],'p'=>$p))}}">{{$expressV.content}}</a></td>
+                    <td align="center"><if condition="$expressV['category'] eq '1'">取消订单原因<else/>退换货原因</if></td>
+                    <td align="center"><if condition="$expressV['is_lock'] eq '1'">是<else/>否</if></td>
+                    <td align="center"><a href="{{:U('Order/order_message_edit',array('id'=>$expressV['id'],'p'=>$p))}}">修改</a></td>
+                </tr>
+            </foreach>
+        </table>
+
+    </div>
+    <!--/列表-->
+
+    <!--内容底部-->
+    <div class="line20"></div>
+    <div class="pagelist">
+        <!-- <div class="l-btns">
+            <span>显示</span><input name="txtPageNum" type="text" value="{{$pageData.listRow}}" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;txtPageNum\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtPageNum" class="pagenum" onkeydown="return checkNumber(event);" /><span>条/页</span>
+        </div> -->
+        <div id="PageContent" class="default">
+            <span>共{{$totalcount}}记录</span>
+            {{$page}}
+        </div>
+    </div>
+    <!--/内容底部-->
+
+</form>
+</body>
+</html>

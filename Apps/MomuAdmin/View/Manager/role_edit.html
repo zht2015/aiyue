@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>新增角色</title>
+<link href="__PUBLIC__/Admin/scripts/artdialog/ui-dialog.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Admin/skin/default/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/jquery/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/artdialog/dialog-plus-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/js/laymain.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/js/common.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //初始化表单验证
+        $("#form1").initValidform();
+        //是否启用权限
+        if ($("#ddlRoleType").find("option:selected").attr("value") == 1) {
+            $(".border-table").find("input[type='checkbox']").prop("disabled", true);
+        }
+        $("#ddlRoleType").change(function () {
+            if ($(this).find("option:selected").attr("value") == 1) {
+                $(".border-table").find("input[type='checkbox']").prop("checked", false);
+                $(".border-table").find("input[type='checkbox']").prop("disabled", true);
+            } else {
+                $(".border-table").find("input[type='checkbox']").prop("disabled", false);
+            }
+        });
+        //权限全选
+        $("input[name='checkAll']").click(function () {
+            if ($(this).prop("checked") == true) {
+                $(this).parent().siblings("td").find("input[type='checkbox']").prop("checked", true);
+            } else {
+                $(this).parent().siblings("td").find("input[type='checkbox']").prop("checked", false);
+            }
+        });
+    });
+</script>
+</head>
+
+<body class="mainbody">
+<form method="post" action="__URL__/role_edit" id="form1">
+<input type="hidden" name="id" value="{{$edata['id']}}" />
+<!--导航栏-->
+<div class="location">
+  <a href="__URL__/role_list" class="back"><i></i><span>返回列表页</span></a>
+  <a href="" class="home"><i></i><span>首页</span></a>
+  <i class="arrow"></i>
+  <a href="__URL__/manager_list"><span>管理员</span></a>
+  <i class="arrow"></i>
+  <a href="__URL__/role_list"><span>管理角色</span></a>
+  <i class="arrow"></i>
+  <span>编辑角色</span>
+</div>
+<div class="line10"></div>
+<!--/导航栏-->
+
+<!--内容-->
+<div id="floatHead" class="content-tab-wrap">
+  <div class="content-tab">
+    <div class="content-tab-ul-wrap">
+      <ul>
+        <li><a class="selected" href="javascript:;">新增角色信息</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="tab-content">
+  <dl>
+    <dt>角色类型</dt>
+    <dd>
+      <div class="rule-single-select">
+        <select name="ddlRoleType" id="ddlRoleType" datatype="*" errormsg="请选择角色类型！" sucmsg=" ">
+        <option <eq name="edata['role_type']" value="1">selected</eq> value="1">超级管理员</option>
+        <option <eq name="edata['role_type']" value="2">selected</eq> value="2">系统管理员</option>
+        </select>
+      </div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>角色名称</dt>
+    <dd><input name="txtRoleName" type="text" id="txtRoleName" value="{{$edata['role_name']}}" class="input normal" datatype="*1-100" sucmsg=" " /> <span class="Validform_checktip">*角色中文名称，100字符内</span></dd>
+  </dl>   
+  <dl>
+    <dt>管理权限</dt>
+    <dd>
+      <table border="0" cellspacing="0" cellpadding="0" class="border-table" width="98%">
+        <thead>
+          <tr>
+            <th width="30%">导航名称</th>
+            <th>权限分配</th>
+            <th width="10%">全选</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+        	<volist name="nav_list" key="k" id="vo">
+        	
+	          <tr>
+	            <td style="white-space:nowrap;word-break:break-all;overflow:hidden;">
+	              <input type="hidden" name="hidName[{{$k}}]" id="hidName_{{$k}}" value="{{$vo['name']}}" />
+	              <!-- <input type="hidden" name="hidActionType[{{$k}}]" id="hidActionType_{{$k}}" value="{{$vo['action_type']}}" /> -->
+	              <!-- <input type="hidden" name="hidLayer[{{$k}}]" id="hidLayer_{{$k}}" value="{{$vo['class_layer']}}" /> -->
+	              <input type="hidden" name="hidLinkUrl[{{$k}}]" id="hidLinkUrl_{{$k}}" value="{{$vo['link_url']}}" />
+	              <input type="hidden" name="hidChannelId[{{$k}}]" id="hidChannelId_{{$k}}" value="{{$vo['channel_id']}}" />
+	              {{$vo['befor']}} {{$vo['title']}}{{$vo['link_url']}}
+	              </td>
+	            <td>
+	            	
+	              <span id="rptList_cblActionType_{{$k}}" class="cbllist">
+	            	<volist name="vo['actionarr']" key="key" id="v">
+	            		<if condition="$v neq ''">
+			              <input id="rptList_cblActionType_{{$k}}_{{$key}}" type="checkbox" {{$vo['name']|checkIsCheck=$v,$edata['id'],###}}  name="cblActionType[{{$k}}][]" value="{{$v}}" />
+			              <label for="rptList_cblActionType_{{$k}}_{{$key}}">{{$v|backPermissionName=###}} </label>
+	            		</if>
+	            	</volist>
+	              </span>
+	              
+	            </td>
+	            <td align="center"><input name="checkAll" type="checkbox" /></td>
+	          </tr>
+        	
+        	</volist>
+        
+        
+          <!-- <tr>
+            <td style="white-space:nowrap;word-break:break-all;overflow:hidden;">
+              <input type="hidden" name="rptList$ctl00$hidName" id="rptList_hidName_0" value="sys_contents" />
+              <input type="hidden" name="rptList$ctl00$hidActionType" id="rptList_hidActionType_0" value="Show" />
+              <input type="hidden" name="rptList$ctl$hidLayer[0]" id="rptList_hidLayer_0" value="1" />
+              <input type="hidden" name="rptList$ctl$hidLayerName[0]" id="rptList_hidLayerName_0" value="sys_contents" />
+              <input type="hidden" name="rptList$ctl$hidLinkUrl[0]" id="rptList_hidLinkUrl_0" value="0" />
+              <input type="hidden" name="rptList$ctl$hidChannelId[0]" id="rptList_hidChannelId_0" value="0" />
+              <span class="folder-open"></span>站点管理                          </td>
+            <td>
+              <span id="rptList_cblActionType_0" class="cbllist">
+              <input id="rptList_cblActionType_0_0_0" type="checkbox" name="rptList$ctl$cblActionType$[0][0]" value="Show" />
+              <label for="rptList_cblActionType_0_0_0"> 显示 </label>              </span>
+            </td>
+            <td align="center"><input name="checkAll" type="checkbox" /></td>
+          </tr>
+
+          <tr>
+            <td style="white-space:nowrap;word-break:break-all;overflow:hidden;">
+              <input type="hidden" name="rptList$ctl02$hidName" id="rptList_hidName_2" value="sys_contents" />
+              <input type="hidden" name="rptList$ctl02$hidActionType" id="rptList_hidActionType_2" value="Show" />
+              <input type="hidden" name="rptList$ctl$hidLayer[2]" id="rptList_hidLayer_2" value="31" />
+              <input type="hidden" name="rptList$ctl$hidLayerName[2]" id="rptList_hidLayerName_2" value="channel_news" />
+              <input type="hidden" name="rptList$ctl$hidLinkUrl[2]" id="rptList_hidLinkUrl_2" value="0" />
+              <input type="hidden" name="rptList$ctl$hidChannelId[2]" id="rptList_hidChannelId_2" value="6" />
+              <span style="display:inline-block;width:24px;"></span><span class="folder-line"></span><span class="folder-open"></span>新闻资讯                          </td>
+            <td>
+              <span id="rptList_cblActionType_2" class="cbllist">
+              <input id="rptList_cblActionType_2_0_2" type="checkbox" name="rptList$ctl$cblActionType$[2][0]" value="Show" />
+              <label for="rptList_cblActionType_2_0_2"> 显示 </label><input id="rptList_cblActionType_2_1_2" type="checkbox" name="rptList$ctl$cblActionType$[2][1]" value="View" />
+              <label for="rptList_cblActionType_2_1_2"> 查看 </label><input id="rptList_cblActionType_2_2_2" type="checkbox" name="rptList$ctl$cblActionType$[2][2]" value="Add" />
+              <label for="rptList_cblActionType_2_2_2"> 添加 </label><input id="rptList_cblActionType_2_3_2" type="checkbox" name="rptList$ctl$cblActionType$[2][3]" value="Edit" />
+              <label for="rptList_cblActionType_2_3_2"> 修改 </label><input id="rptList_cblActionType_2_4_2" type="checkbox" name="rptList$ctl$cblActionType$[2][4]" value="Delete" />
+              <label for="rptList_cblActionType_2_4_2"> 删除 </label>              </span>
+            </td>
+            <td align="center"><input name="checkAll" type="checkbox" /></td>
+          </tr> -->
+                   
+        </tbody>
+      </table>
+    </dd>
+  </dl>
+</div>
+<!--/内容-->
+
+<!--工具栏-->
+<div class="page-footer">
+  <div class="btn-wrap">
+    <input type="submit" name="btnSubmit" value="提交保存" id="btnSubmit" class="btn" />
+    <input name="btnReturn" type="button" value="返回上一页" class="btn yellow" onclick="javascript:history.back(-1);" />
+  </div>
+</div>
+<!--/工具栏-->
+</form>
+</body>
+</html>

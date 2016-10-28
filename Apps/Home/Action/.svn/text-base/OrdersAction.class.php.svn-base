@@ -1,0 +1,174 @@
+<?php
+/**
+ * 订单模块.
+ * User: 苏东羽
+ * Date: 2016/6/12
+ * Time: 14:16
+ */
+namespace Home\Action;
+class OrdersAction extends CommonAction{
+    /*
+    功能：订单列表
+    参数：type订单类型 0所有订单 1待付款 2待发货 3待收货，默认0
+    */
+    public function index(){
+        $type = I('get.type') ? I('get.type') : 0;
+        $rs   = D('Orders')->getOrder($type); 
+        //dump($rs);
+        $this->assign('rs',$rs);
+        $this->display();
+    }
+    /**立即购买(确认订单页)**/
+    public function purchaseNow(){
+        $articleId = I('id');
+        $number  = I('number');
+        /**获取地区**/
+        $area = new AreaAction();
+        $areaInfo=$area->province();
+        $this->assign('area',$areaInfo);
+        
+        /**获取收货地址**/
+        $getUserAddress = M("useraddress")->where("user_id=".$_SESSION['USERS']['id'])->order("add_time desc")->limit(3)->select();
+        $this->assign("userAddress",$getUserAddress);
+        if(empty($getUserAddress)){
+            $this->assign("address","1");
+        }
+
+        for($i=0;$i<count($getUserAddress);$i++){
+            if($getUserAddress[$i]['is_default']==1){
+                $this->assign("defaultInvoice",$getUserAddress[$i]);
+                $this->assign("isDefaults","1");
+            }
+        }
+        //dump($getUserAddress);
+
+        /**获取商品信息**/
+        $getArticle = D("Home/Article");
+        $info=$getArticle -> getArticle($articleId);
+        /**获取商品总金额(商品销售价格*数量)**/
+        $totalMoney=$info[0]['sell_price']*$number;
+        
+        $this->assign('info',$info);
+        $this->assign('number',$number);
+        $this->assign('totalMoney',$totalMoney);
+        $this->display();
+    }
+    /*购物车结算*/
+    public function cart_buy(){
+
+        $getId = $_GET['id'];
+        $id    = substr($getId,0,-1);
+        $this->assign("cartId",$id);
+        /**获取收货地址**/
+        $getUserAddress = M("useraddress")->where("user_id=".$_SESSION['USERS']['id'])->order("add_time desc")->limit(3)->select();
+        $this->assign("userAddress",$getUserAddress);
+        if(empty($getUserAddress)){
+            $this->assign("address","1");
+        }
+        for($i=0;$i<count($getUserAddress);$i++){
+            if($getUserAddress[$i]['is_default']==1){
+                $this->assign("defaultInvoice",$getUserAddress[$i]);
+                $this->assign("isDefaults","1");
+            }
+        }
+        /**获取地区**/
+        $Area = new AreaAction();
+        $getProvince = $Area->province();
+        $this->assign("area",$getProvince);
+        /**获取用户信息**/
+        $userInfo = M("users")->where("id=".$_SESSION['USERS']['id'])->find();
+        $this->assign("usersInfo",$userInfo);
+
+        /**根据ID获取购物车商品**/
+        $carts = M("carts");
+        $getCart = $carts->where("id in($id)")->select();
+
+        /**如果购物车商品为空跳转到我的订单页面**/
+        if($getCart==""){
+            $this->redirect("Orders/index");
+        }
+        /**获取商品ID**/
+        $goodsIdStr = "";
+        for($i = 0;$i<count($getCart);$i++){
+            $goodsIdStr .= $getCart[$i]['article_id'].",";
+        }
+        $goodsId = substr($goodsIdStr,0,-1);//所有商品id
+    
+        $getGoods = D('Article')->goodsPrice($goodsId);//获取所有商品的价格
+
+        /**将购物车数据和商品的信息合并在一个数组中**/
+        foreach($getCart as $k => $v){
+            foreach($getGoods as $key => $val){
+                if($v['article_id'] == $val['id']){
+                    /**商品的基本信息**/
+                    $getCart[$k]['goods'] = $val;
+                    /**计算出单个商品的小计价格(数量*价格)**/
+                    $getCart[$k]['price'] = $v['number']*$val['sell_price'];
+                }
+            }
+        }
+        // dump($getCart);
+        $totalMoney = 0;
+        /**计算出所有商品的合计价格**/
+        foreach($getCart as $k=>$v){
+            $totalMoney += $v['price'];
+        }
+        /**计算出实际需要付款的金额**/
+        $disbursements = $totalMoney + $freight;
+
+        /**统计商品数量**/
+        $count = count($getCart);
+
+        $this->assign("disbursements",$disbursements);
+        $this->assign("totalMoney",$totalMoney);
+        $this->assign("info",$getCart);
+        $this->assign("count",$count);
+        $this->display();
+
+    }
+
+    /**立即购买(生成订单)**/
+    public function promptlyOrders(){
+        $m = D("Home/Orders");
+        $query = $m->promptlyOrders();
+        $this->ajaxReturn($query);
+    }
+     /*
+    订单状态操作
+    */
+    public function order_status(){
+        $d['id']     = I('POST.id');
+        $d['status'] = I('POST.status');
+        $rs = D('Orders')->order_status($d);
+    }
+    /*
+    订单详情
+    */
+    public function order_detailed(){
+        $id = I('GET.id');
+        $rs = D('Orders')->getOrderInfo($id);
+        // dump($rs);
+        $this->assign('express',M('express')->where(array('is_lock'=>0))->select());
+        $this->assign('rs',$rs);
+        $this->display();
+    }
+    /*
+    订单申请退款处理
+    */
+    public function ApplyRefund(){
+        if(IS_POST){
+            D('Orders')->ApplyRefund();
+        }else{
+            $rs = D('Orders')->getOrderInfo(I('GET.id'));
+            // dump($rs);
+            $this->assign('orderInfo',$rs);
+            $this->display();
+        }
+    }
+    /*
+    同意退款寄货处理
+    */
+    public function refundGoods(){
+      D('Orders')->refundGoods();
+    }
+}

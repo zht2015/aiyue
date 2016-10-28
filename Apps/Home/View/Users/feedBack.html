@@ -1,0 +1,60 @@
+
+<div class="main clearfix">
+	<include file="public:left" />
+	<div class="main-right">
+		<div class="right-inner w850 feedback">
+			<p class="feedback-top">请在此留下您的联系方式，我们期待与您取得联系，您的私人信息将受到严格保密。</p>
+			<div class="feedback-con">
+				<span class="feedback-left"><i class="hongxing">*</i>姓 名：</span>
+				<input type="text" id="user_name">
+			</div>
+			<div class="feedback-con">
+				<span class="feedback-left"><i class="hongxing">*</i>邮 箱：</span>
+				<input type="text" id="user_email">
+			</div>
+			<div class="feedback-con">
+				<span class="feedback-left"><i class="hongxing">*</i>联系电话：</span>
+				<input type="text" id="user_tel">
+			</div>
+			<div class="feedback-con">
+				<span class="feedback-left liuyan"><i class="hongxing">*</i>留 言：</span>
+				<textarea name="" id="content" placeholder="--请在这里输入您的意见、建议，我们将用心倾听，为您提供更优质的服务（300字以内）。"></textarea>
+			</div>
+			<a href="javascript:void(0)" class="ljtj" onclick="saveMessage()">立即提交</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	/**左侧导航**/
+	$('.personal ul li').removeClass('cur-li');
+	$('.personal09').addClass('cur-li');
+
+	function saveMessage(){
+	    var user_name=$("#user_name").val();
+	    var user_email=$("#user_email").val();
+	    var user_tel=$("#user_tel").val();
+	    var content=$("#content").val();
+	    if(user_name==""){layer.tips('姓名不能为空', '#user_name');return false}
+	    if(user_email==""){layer.tips('邮箱不能为空', '#user_email');return false}
+	    var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+	    if(!re.test(user_email)){layer.tips('邮箱格式不正确', '#user_email');return false}
+	    if(user_tel==""){layer.tips('电话不能为空', '#user_tel');return false}
+	    if(content==""){layer.tips('留言不能为空', '#content');return false}
+	    
+
+	    $.post("{{:U('Home/Users/feedBack')}}",{"user_name":user_name,"user_email":user_email,"user_tel":user_tel,"content":content},function(data) {
+	       
+	        if(data.status==1){
+	            layer.msg("留言成功",{icon:6});
+	        }else if(data.status==0){
+				layer.msg(data.msg, {icon:5});
+	        }else if(data.status==-1){
+	           layer.tips('邮箱格式不正确', '#user_email'); return false;
+	        }else if(data.status==-2){
+	         	layer.msg(data.msg, {icon:5});
+	        }
+	    });
+	}
+
+</script>

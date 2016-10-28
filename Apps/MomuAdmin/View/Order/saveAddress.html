@@ -1,0 +1,215 @@
+<!doctype html>
+<html style="width:850px;">
+<head>
+    <meta charset="utf-8">
+    <title>收货地址管理</title>
+    <link href="__PUBLIC__/Admin/skin/default/style.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="__PUBLIC__/Home/style/style.css" type="text/css" rel="stylesheet"/> -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/style/personality.css">
+    <!-- <link href="__PUBLIC__/Home/style/media.css" type="text/css" rel="stylesheet"/> -->
+    <script src="__PUBLIC__/Home/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/js/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/layer/layer.js"></script>
+    <style type="text/css">
+        html,body{
+            width:750px;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body style="width:850px;">
+<!--/*弹出框*/-->
+<div id="save">
+    <div class="xgmm_1">
+        <div class="xinz-cen">
+            <table class="tbl-1" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="10%" align="right">收货人：</td>
+                    <td width="90%"><input type="text" name="consignee" value="{{$info['username']}}" placeholder="收货人姓名" id="consignee" class="seInput"></td>
+                </tr>
+                <tr>
+                    <td align="right">手机号：</td>
+                    <td><input type="text" name="mobile" placeholder="手机号码" value="{{$info['userphone']}}" maxlength="11" id="mobile" class="seInput"></td>
+                </tr>
+                <tr>
+                    <td width="10%" align="right">地区：</td>
+                    <td>
+                        <select class="seoption" onchange="province();" id="province">
+                            <option value="-1">选择省份</option>
+                            <volist name="area" id="v">
+                                <if condition="$info['area1'] eq $v['area_id']">
+                                    <script>
+                                        $(function(){
+                                            province();
+                                        })
+                                    </script>
+                                    <option value="{{$v['area_id']}}" selected>{{$v['area_name']}}</option>
+                                    <else/>
+                                    <option value="{{$v['area_id']}}">{{$v['area_name']}}</option>
+                                </if>
+                            </volist>
+                            <input type="hidden" id="cityss" value="{{$info['area2']}}"/>
+                            <input type="hidden" id="areass" value="{{$info['area3']}}"/>
+                        </select>
+                        <select id="city" class="seoption" onchange="province2();">
+                            <option value="-1">选择城市</option>
+                        </select>
+                        <select id="area" class="seoption">
+                            <option value="-1">选择区县</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">详细地址：</td>
+                    <td><input type="text" placeholder="详细地址" value="{{$info['useraddress']}}" id="detailAddress" class="sssInput"></td>
+                </tr>
+                <tr>
+                    <td align="right">&nbsp;</td>
+                    <td><input type="button" onclick="submitte({{$info['orderid']}});" value="保 存" name="" class="seButton" /></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function aa1(){
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            content:  $("#xxmm"), //这里content是一个普通的String
+            area: ['850px'],
+            shade: [0.5, '#000'],
+            shadeClose :true,
+            title:"添加新地址"
+        });
+    }
+
+    /*修改收货地址*/
+    function xx1(){
+        layer.open({
+            type: 2,
+            closeBtn: 1,
+            content: "{{:U('UserAddress/saveAddress')}}", //这里content是一个普通的String
+            area: ['850px','600px'],
+            shade: [0.5, '#000'],
+            shadeClose :true,
+            title:"修改地址"
+        });
+    }
+
+    function province(){
+        var province=$("#province").val();
+        $("#city").html("<option value='-1'>请选择</option>");
+        $("#area").html("<option value='-1'>请选择</option>");
+        var cityss = $("#cityss").val();
+        $.post("{{:U('Area/city')}}",{id:province},function(data){
+            var length = data.length;
+            var html = "<option value='-1'>请选择</option>";
+            for(var i=0;i<length;i++){
+                if(cityss==data[i].area_id){
+                    html += "<option value="+data[i].area_id+" selected >"+data[i].area_name+"</option>";
+                }else{
+                    html += "<option value="+data[i].area_id+">"+data[i].area_name+"</option>";
+                }
+            }
+            $("#city").html(html);
+
+            var city = $("#city").val();
+            $.post("{{:U('Area/area')}}",{id:city},function(data){
+                if(data==null){
+                    $("#area").hide();
+                }else{
+                    $("#area").show();
+                }
+                var length = data.length;
+                var html="";
+                html ="<option value='-1'>请选择</option>";
+                var areass = $('#areass').val();
+                for(var i=0;i<length;i++){
+                    if(areass==data[i].area_id){
+                        html += "<option value="+data[i].area_id+" selected>"+data[i].area_name+"</option>";
+                    }else{
+                        html += "<option value="+data[i].area_id+">"+data[i].area_name+"</option>";
+                    }
+                }
+                $("#area").html(html);
+            })
+
+
+        })
+    }
+
+    function province2(){
+        var city = $("#city").val();
+        $("#area").html("");
+        $.post("{{:U('Area/area')}}",{id:city},function(data){
+            if(data==null){
+                $("#area").hide();
+            }else{
+                $("#area").show();
+            }
+            var length = data.length;
+            var html="";
+            html ="<option value='-1'>请选择</option>";
+            var areass = $('#areass').val();
+            for(var i=0;i<length;i++){
+                if(areass==data[i].area_id){
+                    html += "<option value="+data[i].area_id+" selected>"+data[i].area_name+"</option>";
+                }else{
+                    html += "<option value="+data[i].area_id+">"+data[i].area_name+"</option>";
+                }
+            }
+            $("#area").html(html);
+        })
+    }
+    function submitte(id){
+        var params = {};
+        params.orderId   = id;
+        params.province  = $("#province option:selected").text();
+        params.city      = $("#city option:selected").text();
+        params.area      = $("#area option:selected").text();
+        params.area1     = $("#province option:selected").val();
+        params.area2     = $("#city option:selected").val();
+        params.area3     = $("#area option:selected").val();
+        params.userName  = $("#consignee").val();
+        params.userPhone = $("#mobile").val();
+        params.address  = $("#detailAddress").val();
+        params.area     = params.province+" "+params.city+" "+params.area;
+        if(params.consignee==""){
+            layer.msg("收货人不能为空");
+            return;
+        }
+        if(params.area1=="-1"){
+            layer.msg("请选择省份");
+            return;
+        }
+        if(params.area2=="-1"){
+            layer.msg("请选择城市");
+            return;
+        }
+        if(params.area3=="-1"){
+            layer.msg("请选择区县");
+            return;
+        }
+        if(params.address==""){
+            layer.msg("详细地址不能为空");
+            return;
+        }
+        $.post("{{:U('Order/chage_order_address')}}",params,function(data){
+            if(data.status==1){
+                layer.msg("修改成功");
+                setTimeout(function(){
+                    parent.location.reload();
+                },500)
+
+            }
+        })
+    }
+</script>
+
+</body>
+</html>

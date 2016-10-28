@@ -1,0 +1,28 @@
+<?php
+/**
+ * 订单模块.
+ * User: 苏东羽
+ * Date: 2016/6/12
+ * Time: 14:16
+ */
+namespace Home\Action;
+class OrderAction extends CommonAction{
+    public function index(){
+        $this->display();
+    }
+
+    /**立即购买**/
+    public function purchaseNow(){
+        $articleId = I('id');
+        $number  = I('number');
+        /**获取商品信息**/
+        $getArticle = D("Home/Article");
+        $info=$getArticle -> getArticle($articleId);
+        /**获取商品总金额(商品销售价格*数量)**/
+        $totalMoney=$info[0]['sell_price']*$number;
+        $this->assign('info',$info);
+        $this->assign('number',$number);
+        $this->assign('totalMoney',$totalMoney);
+        $this->display();
+    }
+}

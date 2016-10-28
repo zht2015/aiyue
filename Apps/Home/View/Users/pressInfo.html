@@ -1,0 +1,220 @@
+	<script type="text/javascript" src="__PUBLIC__/Home/webuploader/webuploader.min.js"></script>
+	<div class="main clearfix">
+		<include file="Public/left" />
+		<div class="main-right">
+			<div class="right-top">
+				<div class="per-top">
+					<a href="{{:U('Users/pressInfo')}}" class="per-span cur-per">个人资料</a>
+					<a href="{{:U('Users/uploadAvatar')}}" class="per-span">修改头像</a>
+					<a href="{{:U('Users/savePwd')}}" class="per-span">修改密码</a>
+				</div>
+			</div>
+			<div class="right-inner per-center w740">
+				<p class="per-title">亲爱的 <span class="color1">{{$user.press}}</span>，您的资料如下：</p>
+				<div class="per-inp clearfix">
+					<span class="per-left">当前头像：</span>
+					<div class="per-right">
+						<div class="per-head">
+							<img src="{{$user.avatar}}" alt="">
+						</div>
+						<a href="{{:U('Users/uploadAvatar')}}" class="revise-a">修改头像 >></a>
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">公司名称：</span>
+					<div class="per-right">
+						<span class="right-info">{{$user.press}}</span>
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">负责人：</span>
+					<div class="per-right">
+						<span class="right-info">{{$user.name}}</span>
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">联系方式：</span>
+					<div class="per-right">
+						<span class="right-info">{{$user.mobile}}</span>
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">注册日期：</span>
+					<div class="per-right">
+						<span class="right-info">{{$user.reg_time}}</span>
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">公司地址：</span>
+					<div class="per-right per-loca">
+						<select name="province" id="province">
+							<option value="0">请选择省份</option>
+							<foreach name="province" item="vo" >
+							    <option value="{{$vo.area_id}}" <eq name="vo.area_id" value="$user.province">selected="selected"</eq> >
+							    	{{$vo.area_name}}
+							    </option>
+							</foreach>
+														
+						</select>
+						<select name="city" id="city">
+							<option value="0">请选择城市</option>
+							
+							<foreach name="city" item="vo" >
+								<eq name="vo.area_id" value="$user.city">
+									<option value="{{$vo.area_id}}"  selected="selected">{{$vo.area_name}}
+							    	</option>
+								</eq>
+							    
+							</foreach>
+						</select>
+						<textarea name="" id="area" class="loca-info" placeholder="请输入公司详细地址">{{$user.area}}</textarea>
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">公司简介：</span>
+					<div class="per-right">
+						<textarea name="" id="press_intro" class="gsjj" placeholder="请输入公司简介">{{$user.press_intro}}</textarea>
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">公司网址：</span>
+					<div class="per-right">
+						<input type="text" value="{{$user.press_url}}" class="gswz" id="press_url">
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">微信号二维码：</span>
+					<div class="per-right">
+						<input type="text" class="wx-input" id="pic-name"><input type="hidden" id="qr">
+						<span class="wx-code" id="filePicker">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</div>
+				</div>
+				<a href="#" class="save-sure" onclick="savePressInfo()">确认保存</a>
+			</div>
+		</div>
+	</div>
+	<style type="text/css">
+		.webuploader-container {
+			position: relative;
+		}
+		.webuploader-element-invisible {
+			position: absolute !important;
+			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+		    clip: rect(1px,1px,1px,1px);
+		}
+		.webuploader-pick {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			/*background: #00b7ee;*/
+			padding: 10px 15px;
+			color: #fff;
+			text-align: center;
+			border-radius: 3px;
+			overflow: hidden;
+		}
+		
+
+		.webuploader-pick-disable {
+			opacity: 0.6;
+			pointer-events:none;
+		}
+	</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/**获取城市**/
+		$("#province").change(function() {
+			$("#province option:selected").attr("selected","");
+			var provinceid = $("#province").val();
+			
+			$("#city").empty();
+			$("#city").append("<option value='0'>请选择城市</option>");
+	   		$.post("{{:U('Home/Users/loadCity')}}",{"provinceid":provinceid},function(data) {
+		    
+				for(var i = 0;i<data.length;i++){
+					$("#city").append("<option value="+data[i].area_id+">"+data[i].area_name+"</option>");
+				}
+			});
+	    });
+	    // 初始化Web Uploader
+	    var index = 0;
+	    var uploader = WebUploader.create({
+
+	        // 选完文件后，是否自动上传。
+	        auto: true,
+
+	        // swf文件路径
+	        swf: "__PUBLIC__/Home/webuploader/uploader.swf",
+
+	        // 文件接收服务端。
+	        server: "{{:U('Users/uploadIdCart')}}",
+
+	        // 选择文件的按钮。可选。
+	        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+	        pick: '#filePicker',
+
+	        // 只允许选择图片文件。
+	        accept: {
+	            title: 'Images',
+	            extensions: 'gif,jpg,jpeg,bmp,png',
+	            mimeTypes: 'image/*'
+	        }
+	    });
+
+
+		// 当有文件添加进来的时候
+        uploader.on('fileQueued', function (file) {
+        });
+        // 文件上传过程中
+        uploader.on('uploadProgress', function (file, percentage) {
+            index = layer.load();
+        });
+
+        // 文件上传成功
+        uploader.on('uploadSuccess', function (file, data) {
+            if (data.status){
+                var img_url = (data.savepath + 'thumb_' + data.savename).substr(1);
+                console.log(img_url);
+                $('#qr').val(img_url);
+                $('#pic-name').val(data.name);
+               
+                layer.msg('上传成功', {icon: 6});
+                layer.close(index);
+            } else{
+                layer.msg('上传失败，请重试', {icon: 5});
+            }
+        });
+
+        // 文件上传失败，现实上传出错。
+        uploader.on('uploadError', function (file) {
+            layer.msg('上传失败，请重试', {icon: 5});
+        });
+        // 完成上传完了，成功或者失败，先删除进度条。
+        uploader.on('uploadComplete', function (file) {
+            layer.close(index);
+        });
+
+
+    });
+
+    function savePressInfo(){
+    	
+    	var provinceid  = $("#province option:selected").val()
+    	var cityid  = $("#city option:selected").val()
+    	/*var provincename  = $("#province option:selected").text()
+    	var cityname  = $("#city option:selected").text()*/
+    	var area = $("#area").val();
+    	var press_intro  =$("#press_intro").val();
+    	var press_url = $("#press_url").val();
+    	var press_qr = $("#qr").val();
+    	
+    	$.post("{{:U('Home/Users/pressInfo')}}", {"provinceid":provinceid,"cityid":cityid,"area":area,"press_intro":press_intro,"press_url":press_url,"press_qr":press_qr}, function(data){
+    		console.log("cg");
+    		if(data.status==1){
+    			layer.msg("资料修改成功",{icon:6});
+    		}else{
+    			layer.msg("资料修改失败",{icon:5});
+    		}
+    	});
+    }
+</script>

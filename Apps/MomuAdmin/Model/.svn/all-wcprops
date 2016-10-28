@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model
+END
+ArticleAttributeValueModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ArticleAttributeValueModel.class.php
+END
+UserAmountLogModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/UserAmountLogModel.class.php
+END
+ArticleCommentModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ArticleCommentModel.class.php
+END
+OrderGoodsModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/OrderGoodsModel.class.php
+END
+ChannelModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ChannelModel.class.php
+END
+ArticleAttachModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ArticleAttachModel.class.php
+END
+ArticleAttributeFieldModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ArticleAttributeFieldModel.class.php
+END
+ChannelFieldModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ChannelFieldModel.class.php
+END
+ArtCatRelationModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ArtCatRelationModel.class.php
+END
+PaymentModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/PaymentModel.class.php
+END
+MailTemplateModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/MailTemplateModel.class.php
+END
+UserGroupsModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/UserGroupsModel.class.php
+END
+TestModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/TestModel.class.php
+END
+UserOauthModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/UserOauthModel.class.php
+END
+UserRechargeModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/UserRechargeModel.class.php
+END
+UserOauthAppModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/UserOauthAppModel.class.php
+END
+ArticleCategoryModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ArticleCategoryModel.class.php
+END
+ArticleModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/hscmall/!svn/ver/17/Apps/MomuAdmin/Model/ArticleModel.class.php
+END
+UserMessageModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/UserMessageModel.class.php
+END
+ArticleAlbumsModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ArticleAlbumsModel.class.php
+END
+CommonModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/CommonModel.class.php
+END
+ExpressModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ExpressModel.class.php
+END
+UserPointLogModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/UserPointLogModel.class.php
+END
+ChannelSiteModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/ChannelSiteModel.class.php
+END
+OrdersModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/OrdersModel.class.php
+END
+SmsTemplateModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/SmsTemplateModel.class.php
+END
+UsersModel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/hscmall/!svn/ver/1/Apps/MomuAdmin/Model/UsersModel.class.php
+END

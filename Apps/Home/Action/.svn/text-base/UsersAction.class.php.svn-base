@@ -1,0 +1,193 @@
+<?php
+/**
+ * 商城用户个人中心模块
+ * User: 苏东羽
+ * Date: 2016/6/12
+ * Time: 9:56
+ * 修改 胡望明  2016.7.28
+ */
+namespace Home\Action;
+class UsersAction extends CommonAction{
+    /**个人中心首页**/
+    public function index(){
+        $this->checkLogin();
+        //近期订单
+        $LatelyOrder   = D('Users')->LatelyOrder();
+        //近期收藏
+        $LatelyCollect = D('Users')->LatelyCollect();
+        //推荐商品
+        $Recommend     = D('Article')->is_red();
+        
+        $this->assign('latelyCollect',$LatelyCollect);
+        $this->assign('latelyOrder',$LatelyOrder);
+        $this->assign('recommend',$Recommend);
+        $this->display();
+    }
+    /**用户登录**/
+    public function userLogin(){
+        $flag = I("flag",0);
+        $flags = I('flags',0);
+        $rs = array("status"=>-1);
+        if($flag==1){
+             $m = D("Home/Users");
+            /**验证帐号密码**/
+            $getUserInfo = $m->userLogin();
+           if($getUserInfo>0){
+               if($flags!=1){
+                   /**检测验证码是否正确**/
+                   $checkVerify= $this->checkVerify(I("verify"));
+                   if($checkVerify){$rs['status']=1;}else{$rs['status']=-2;}
+               }else{
+                   $rs['status']=1;
+               }
+            }
+            $this->ajaxReturn($rs);
+        }else{
+            $this->display();
+        }
+    }
+    /**用户注册**/
+    public function userRegister(){
+        $phone = I("phone",0);
+        if($phone != 0){
+            $m  = D("Home/Users");
+            $rs = $m->userRegister();
+            $this->ajaxReturn($rs);
+        }else{
+            $this->display();
+        }
+    }
+    /**我的积分**/
+    public function myIntegral(){
+        $this->checkLogin();
+        $this->display();
+    }
+    /**修改密码**/
+    public function savePwd(){
+        $this->checkLogin();
+        if(IS_POST){
+            $newPass = md5(I('POST.newPass'));
+            $rs = D('Users')->savePwd($newPass) ? success('修改成功') : fail('修改失败，未知错误');
+        }else{
+            $uid     = $_SESSION['USERS']['id'];
+            $type    = I('GET.type') ? I('GET.type') : 0;
+            $session = $_SESSION['check_code'];
+            if($type ==0 || $session ==''){
+                $this->assign('check',0);
+            }else{
+                $this->assign('check',1);
+            }
+            $this->assign('userInfo',D('Users')->userInfo());
+            $this->display();
+        }
+    }
+    /*
+    验证手机发送的验证码
+    */
+    public function check_code(){
+        $code    = I('POST.code');
+        $session = $_SESSION['code'];
+
+        if($code != $session){
+            fail('验证码不正确');
+        }else{
+            session('check_code','1');
+            success('验证成功',U('Users/savePwd',array('type'=>1)));
+        }
+    }
+    /**检测手机号码是否存在**/
+    public function verifyPhone(){
+        $m = D("Home/Users");
+        $rs=$m->verifyPhone();
+        $this->ajaxReturn($rs);
+    }
+    /**检测手机号码是否存在**/
+    public function verifyInterCode(){
+        $m = D("Home/Users");
+        $rs=$m->verifyInterCode();
+        $this->ajaxReturn($rs);
+    }
+    /**个人资料**/
+    public function userInfo(){
+        $m     = D("Home/Users");
+        $flag  = I("flag",0);
+        if($flag==1){
+            /**修改用户基本信息**/
+            $rs = $m->saveUserInfo();
+            $this->ajaxReturn($rs);
+        }else{
+            $this->display();
+        }
+    }
+    /**
+     * 退出登录
+     */
+    public function logout(){
+        $session=session('USERS',null);
+    }
+    /*用户上传头像*/
+    public function uploadIdCarts(){
+     
+        $upload = $this->_upload('300', '97', 'thumb_', FALSE);
+        $url = "/".$upload['savepath'].$upload['savename'];
+        $this->ajaxReturn(1);
+    }
+    public function uploadIdCart(){
+        $upload = $this->_upload('300', '97', 'thumb_', FALSE);
+        echo json_encode($upload);
+    }
+    /*
+    * 图片上传方法
+    * $isthum是否移除原图
+    */
+    private function _upload($width, $height, $th, $isthum) {
+        import('ORG.Net.UploadFile');
+        $imgAllowExts = C('UPLOAD_EXTS');
+        if (!file_exists(C('UPLOAD_PATH'))) {
+            mkdir(C('UPLOAD_PATH'));
+        }
+        $savepath = C('UPLOAD_PATH');
+        if (!file_exists($savepath . '/' . date('Ym'))) {
+            mkdir($savepath . '/' . date('Ym'));
+        }
+        $savepath = $savepath . '/' . date('Ym') . '/' . date('d') . '/';
+        if (!file_exists($savepath)) {
+            mkdir($savepath);
+        }
+        $config = array(
+            'maxSize' =>200000000, // 上传文件的最大值
+            'supportMulti' => true, // 是否支持多文件上传
+            'allowExts' => $imgAllowExts, // 设置附件上传类型
+            'thumb' => true, // 使用对上传图片进行缩略图处理
+            'thumbMaxWidth' => $width, // 缩略图最大宽度
+            'thumbMaxHeight' => $height, // 缩略图最大高度
+            'thumbPrefix' => $th, // 缩略图前缀
+            'thumbSuffix' => '',
+            'thumbPath' => $savepath, // 缩略图保存路径
+            'thumbFile' => '', // 缩略图文件名
+            'thumbExt' => '', // 缩略图扩展名
+            'thumbRemoveOrigin' => $isthum, // 是否移除原图
+            'zipImages' => false, // 压缩图片文件上传
+            'autoSub' => false, // 启用子目录保存文件
+            'subType' => 'hash', // 子目录创建方式 可以使用hash date
+            'dateFormat' => 'Ymd',
+            'hashLevel' => 1, // hash的目录层次
+            'savePath' => $savepath, // 上传文件保存路径
+            'autoCheck' => true, // 是否自动检查附件
+            'uploadReplace' => false, // 存在同名是否覆盖
+            'saveRule' => 'uniqid', // 上传文件命名规则
+            'hashType' => 'md5_file', // 上传文件Hash规则函数名
+        );
+        $upload = new \UploadFile($config); // 实例化上传类
+        if (!$upload->upload()) {// 上传错误提示错误信息
+            return array('status' => 0, 'msg' => $upload->getErrorMsg());
+        } else {// 上传成功 获取上传文件信息
+            $info = $upload->getUploadFileInfo();
+            return array(
+                'status' => 1,
+                'savepath' => $info[0]['savepath'],
+                'savename' => $info[0]['savename']
+            );
+        }
+    }
+}

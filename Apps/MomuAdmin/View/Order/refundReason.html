@@ -1,0 +1,204 @@
+<link href="__PUBLIC__/Home/style/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/layer/layer.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/layer/extend/layer.ext.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Home/js/bootstrap.min.js"></script>
+
+<style>
+    .sssButtons{
+        float: left;
+        width: 78%;
+        background:rgb(22,160,211);
+        border:0;
+        height:40px;
+        font-size:18px;
+        color:white;
+        bottom:10px;
+    }
+    .sssInput {
+        float: left;
+        width: 78%;
+        height: 40px;
+        border: 1px solid #cccccc;
+        margin-right: 5px;
+        padding-left: 5px;
+    }
+</style>
+
+<div id="checks9">
+    <div style="margin:10px 20px 10px 20px;">
+        <table style=" margin-top:10px;" border="0" width="100%">
+            <tr>
+                <td style="width:20%;text-align:right;height:50px;">退货商品：</td>
+                <td>{{$rs['goods_title']}}</td>
+            </tr>
+            <tr>
+                <td style="width:20%;text-align:right;height:50px;">退货说明：</td>
+                <td>{{$rs['return_info']}}</td>
+            </tr>
+            <tr>
+                <td style="width:20%;text-align:right;height:50px;">退货原因：</td>
+                <td>{{$rs['return_reason']}}</td>
+            </tr>
+            <!--<if condition="$rs['refundImg'] neq ''">-->
+            <tr>
+                <td style="width:20%;text-align:right;height:50px;">退货凭证：</td>
+                <td>
+                   <div id="layer-photos-demo" class="layer-photos-demo">
+                      <!--<foreach name="rs['refundImg']" item="v">-->
+                       <img layer-pid="{{$key}}" layer-src="{{:str_replace('thumb_', '', $v)}}" src="{{$v}}" width="80px" height="90px" style="padding:10px 10px;cursor: pointer;">
+                      <!--</foreach>-->
+                   </div>
+                </td>
+            </tr>
+            <!--</if>-->
+            <tr>
+                <td style="width:20%;text-align:right;height:50px;">用户申请退款时间:</td>
+                <td>{{$rs['refundTime']}}</td>
+            </tr>
+            <tr>
+                <td style="width:20%;text-align:right;height:50px;">商家同意退款时间:</td>
+                <td>{{$rs['refundQueryTime']}}</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr align="center">
+               <td colspan="2">
+                <switch name = "rs['goodsStatus']">
+                  <case value = "5">
+                    <span style="padding-right:20px;">
+                      <button type="button" class="btn btn-primary" onclick="refundApply({{$rs['id']}});">
+                        同意退款申请
+                    </button>
+                    </span>
+                    <span>
+                      <button type="button" class="btn btn-danger" onclick="refused({{$rs['id']}});">
+                        拒绝退款申请
+                      </button>
+                    </span>
+                  </case>
+                  <case value = "6">
+                      <button type="button" class="btn btn-danger">
+                       商家已同意用户退款申请，等待收货中</button>
+                   </case>
+                   <case value = "7">
+                      <button type="button" class="btn btn-danger" onclick="refused({{$rs['id']}});">
+                       商家待收货</button>
+                   </case>
+                   <case value = "8">
+                    <button type="button" class="btn btn-danger">
+                       商家已收货，待确定退款</button>
+                   </case>
+                   <case value = "9">
+                    <button type="button" class="btn btn-danger">
+                        已同意退款</button>
+                   </case>
+                   <case value = "10">
+                    <button type="button" class="btn btn-danger">
+                        已拒绝退款</button>
+                   </case>
+                   <case value = "14">
+                    <button type="button" class="btn btn-danger">
+                        已完成</button>
+                   </case>
+               </switch>
+               </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<div style="display:none;" id="refundApply">
+    <div style="width:90%;margin:20px;">
+        <div style="float:left;width:100%;margin-bottom:20px;margin-left:30px;">
+            <input type="text" class="sssInput"  value="{{$shipmentAddress[1]['value']}}" placeholder="请输入联系人姓名" id="shipmentName">
+        </div>
+        <div style="float:left;width:100%;margin-bottom:20px;margin-left:30px;">
+            <input type="text" class="sssInput"  value="{{$shipmentAddress[0]['value']}}" placeholder="请输入联系人电话" id="shipmentPhone">
+        </div>
+        <div style="float:left;width:100%;margin-bottom:20px;margin-left:30px;">
+            <input type="text" class="sssInput"  value="{{$shipmentAddress[2]['value']}}" placeholder="请输入寄货地址" id="shipmentAddress">
+        </div>
+        <div style="float:left;width:100%;margin-left:30px;margin-bottom:20px;">
+            <button type="button" onclick="confirmOrderRefund();" class="sssButtons">确定</button>
+        </div>
+    </div>
+    <input type="hidden" value="" id="id"/>
+</div>
+
+ <script type="text/javascript">
+  //相册js
+  layer.ready(function(){ //为了layer.ext.js加载完毕再执行
+      layer.photos({
+      photos: '#layer-photos-demo'
+      });
+  });
+  //单个商品同意退款
+  function agreen(id){
+    var type = 1; 
+     layer.confirm('操作确认？', {
+      btn: ['确定','取消'],
+    }, function(){
+       $.post("{{:U('Order/goodsStatus')}}",{id:id,type:type},function(data){
+            if(data.status == 'success' ){
+                layer.msg(data.info);
+                location.reload();
+            }else{
+               layer.msg(data.info);
+            }
+        },'json');
+    }, function(){});
+  }
+
+
+  function refundApply(id){
+      layer.open({
+          type: 1,
+          title: '同意用户退款申请',
+          shadeClose: true,
+          shade: 0.2,
+          area:['500px','350px'],
+          content: $("#refundApply")
+      });
+      $("#id").val(id);
+  }
+
+  function confirmOrderRefund(){
+      var oid=$("#id").val();
+      var type = 1;
+      var shipmentAddress= $("#shipmentAddress").val();
+      var shipmentName= $("#shipmentName").val();
+      var shipmentPhone= $("#shipmentPhone").val();
+      $.post("{{:U('Order/goodsStatus')}}",{id:oid,type:type,shipmentAddress:shipmentAddress,shipmentPhone:shipmentPhone,shipmentName:shipmentName},function(data){
+          var obj = eval("("+data+")");
+          if(obj.status == 'success' ){
+              layer.msg(obj.info);
+              parent.location.reload();
+          }else{
+              layer.msg(obj.info);
+          }
+      });
+  }
+
+
+  //单个商品拒绝退款
+  function refused(id){
+    var type = 0;
+    layer.prompt({
+    title: '拒绝原因',
+    formType: 2
+    }, function(text){
+         $.post("{{:U('Order/goodsStatus')}}",{id:id,type:type,refuseReason:text},function(data){
+            if(data.status == 'success' ){
+                layer.msg(data.info);
+                location.reload();
+            }else{
+               layer.msg(data.info);
+            }
+        },'json');
+    });
+  }
+</script>

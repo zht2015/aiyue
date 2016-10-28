@@ -1,0 +1,453 @@
+<?php
+namespace MomuAdmin\Action;
+class OrderAction extends CommonAction {
+   
+    /**
+     * @time 2016/06/28
+     * @function 获取基本数据列表
+     */
+    public function order_list() {
+       $pagenum = isset($_REQUEST['txtPageNum'])?$_REQUEST['txtPageNum']:C('PAGE_SIZE');//获取分页的每页数据条数
+       $txtKeywords = isset($_REQUEST['txtKeywords'])?$_REQUEST['txtKeywords']:"";
+       $ddlStatus = isset($_REQUEST['ddlStatus'])?$_REQUEST['ddlStatus']:"";
+       
+       if(IS_POST){
+           $evename = $_REQUEST['__EVENTTARGET'];
+           $evenmess = $_REQUEST['__EVENTARGUMENT'];
+           if($evename == "btnDelete"){
+               $delstr = "";
+               $chkid = $_REQUEST['chkId'];
+               $allids = $_REQUEST['hidId'];
+               foreach ($chkid as $k=>$v){
+                   $delstr .= $allids[$k].",";
+               }
+               $delstr = substr($delstr,0,-1);
+               $res = D("Orders")->changeOrderData(array("status"=>"0"),array("id"=>array("in",$delstr)));
+               $this->redirect("Order/order_list");
+           }
+       }
+       
+       if($txtKeywords != ""){
+           $where['o.order_no|o.user_name'] = array("like","%".$txtKeywords."%");
+       }
+       if($ddlStatus != ""){
+           $where['o.status'] = $ddlStatus;
+       }else{
+           $where['o.status'] = array("neq","0");
+       }
+       
+        $count = D("Orders")->getPersonalOrders($where,"",1);// 查询满足要求的总记录数
+        $Page = new \Think\Page($count,$pagenum);// 实例化分页类 传入总记录数和每页显示的记录数
+        $show = $Page->show();// 分页显示输出
+        
+        $list = D("Orders")->getPersonalOrders($where,$Page,"");// 获取分页数据
+        //var_dump($list);
+        
+        $this->assign('list',$list);// 赋值数据集
+        $this->assign('page',$show);// 赋值分页输出
+        $this->assign('totalcount',$count);//总条数 
+        $this->assign("pagenum",$pagenum);
+        $this->display(); // 输出模板
+    }
+    
+    /***
+     * @time 2016/06/28
+     * @function 订单配置
+     */
+    public function order_config(){
+        $configpath = "./oconfig/orderconfig.json";
+        
+        if(IS_POST){
+            $anonymous = $_REQUEST['anonymous']=="on"?1:0;
+            $orderconfig = array(
+                "anonymousBuy"=>$anonymous,  //匿名购买 0否  1是
+                "invoiceType"=>$_REQUEST['taxtype'], //发票类型 1百分比 2固定金额
+                "invoiceMoney"=>$_REQUEST['taxamount'],//发票税金费用
+                 
+                "orderEnsure"=>$_REQUEST['confirmmsg'],//订单确认通知 0、关闭通知 1、短信通知 2、邮件通知
+                "ensureModel"=>$_REQUEST['confirmcallindex'],//订单确认模板调用别名
+                 
+                "orderExpress"=>$_REQUEST['expressmsg'],//订单发货通知 0、关闭通知 1、短信通知 2、邮件通知
+                "expressModel"=>$_REQUEST['expresscallindex'],//订单发货模板调用别名
+                 
+                "orderComplete"=>$_REQUEST['completemsg'],//订单完成通知 0、关闭通知 1、短信通知 2、邮件通知
+                "completeModel"=>$_REQUEST['completecallindex'],//订单完成模板调用别名
+            );
+            $res = file_put_contents($configpath, json_encode($orderconfig));
+            if($res=="0"){
+                die('oconfig目录没有写入配置文件的权限');
+            }
+            $this->assign("d",$orderconfig);
+        }else{
+            if(file_exists($configpath)){//已经有了，则获取相应的数据
+                $d = file_get_contents($configpath);
+                $data = json_decode($d,true);
+                $this->assign("d",$data);
+            }else{
+                //初始化配置文件
+               $orderconfig = array(
+                   "anonymousBuy"=>"0",  //匿名购买 0否  1是
+                   "invoiceType"=>"1", //发票类型 1百分比 2固定金额
+                   "invoiceMoney"=>10,//发票税金费用
+                   
+                   "orderEnsure"=>"0",//订单确认通知 0、关闭通知 1、短信通知 2、邮件通知
+                   "ensureModel"=>"order_confirm",//订单确认模板调用别名
+                   
+                   "orderExpress"=>"0",//订单发货通知 0、关闭通知 1、短信通知 2、邮件通知
+                   "expressModel"=>"order_express",//订单发货模板调用别名
+                   
+                   "orderComplete"=>"0",//订单完成通知 0、关闭通知 1、短信通知 2、邮件通知
+                   "completeModel"=>"order_complete",//订单完成模板调用别名
+               ); 
+               $res = file_put_contents($configpath, json_encode($orderconfig));
+               if($res=="0"){
+                   die('oconfig目录没有写入配置文件的权限');
+               }
+               $this->assign("d",$orderconfig);
+            }
+        }
+        
+        $this->display();
+    }
+    
+    /***
+     * @time 2016/06/28
+     * @function 支付配置
+     */
+    public function payment_list(){
+        $this->showSysTips();
+        $where = "";
+        $searchtxt = isset($_REQUEST['txtkeywords'])?$_REQUEST['txtkeywords']:"";
+        if(IS_POST){
+            $evename = $_REQUEST['__EVENTTARGET'];
+            $evenmess = $_REQUEST['__EVENTARGUMENT'];
+            if($evename == "lbtnSearch"){
+                $searchtxt = $_REQUEST['txtKeywords'];
+            }else if($evename == "btnDelete"){
+                $delstr = "";
+                $chkid = $_REQUEST['chkId'];
+                $allids = $_REQUEST['hidId'];
+                foreach ($chkid as $k=>$v){
+                    $delstr .= $allids[$k].",";
+                }
+                $delstr = substr($delstr,0,-1);
+                $res = D("Payment")->delDataByIds($delstr);
+                $this->redirect("Order/payment_list",array("flag"=>"2"));
+            }
+        }
+        if($searchtxt != ""){
+            $where["title|sort_id"] = array("like","%".$searchtxt."%");
+        }
+        $d = D("Payment")->getTabList("","sort_id desc",$where);
+        $this->assign("data",$d);
+        $this->display();
+    }
+    
+    /***
+     * @time 2016/06/29
+     * @function 支付方式配置编辑
+     */
+    public function payment_edit(){
+        $eid = isset($_REQUEST['id'])?$_REQUEST['id']:0;
+        if($eid == 0){$this->error('获取不到修改的模块数据！');die();}
+        if(IS_POST){//提交过来的修改数据
+            $res = D("Payment")->DataSave();
+            if($res == "false"){$this->error('修改失败！');die();}
+            $this->redirect("Order/payment_list",array("flag"=>"3"));
+        }else{
+            $d = D("Payment")->getTabList("","",array("id"=>$eid),"","1");
+            $this->assign("d",$d);
+        }
+        $this->display();
+    }
+    /***
+     * @time 2016/06/29
+     * @function 支付方式新增
+     */
+    public function payment_add(){
+        if(IS_POST){
+            $res = D("Payment")->dataAdd();
+            if($res == "false"){$this->error('新增失败了！');die();}
+            $this->redirect("Order/payment_list",array("flag"=>"1"));die();
+        }
+        $this->display();
+    }
+    
+    
+    /***
+     * @time 2016/06/28-29
+     * @function 配送
+     */
+    public function express_list(){
+        $this->showSysTips();
+        $pagenum = isset($_REQUEST['txtPageNum'])?$_REQUEST['txtPageNum']:C('PAGE_SIZE');//获取分页的每页数据条数
+        $where = "";
+        $searchtxt = isset($_REQUEST['txtkeywords'])?$_REQUEST['txtkeywords']:"";
+        if(IS_POST){
+            $evename = $_REQUEST['__EVENTTARGET'];
+            $evenmess = $_REQUEST['__EVENTARGUMENT'];
+            if($evename == "btnDelete"){
+                $delstr = "";
+                $chkid = $_REQUEST['chkId'];
+                $allids = $_REQUEST['hidId'];
+                foreach ($chkid as $k=>$v){
+                    $delstr .= $allids[$k].",";
+                }
+                $delstr = substr($delstr,0,-1);
+                $res = D("Express")->delDataByIds($delstr);
+                $this->redirect("Order/express_list",array("flag"=>"2"));
+            }elseif($evename == "lbtnSearch"){
+                $searchtxt = $_REQUEST['txtKeywords'];
+            }else{//可扩展
+                
+            }
+        }
+        if($searchtxt != ""){
+            $where["title|express_code"] = array("like","%".$searchtxt."%");
+        }
+        $countarr = D("Express")->getTabList("","sort_id desc",$where);// 查询满足要求的总记录数
+        $count = count($countarr);
+        $Page = new \Think\Page($count,$pagenum);// 实例化分页类 传入总记录数和每页显示的记录数
+        $show = $Page->show();// 分页显示输出
+        
+        $list = D("Express")->getTabList("","sort_id desc",$where,$Page);// 获取分页数据
+        
+        $this->assign('list',$list);// 赋值数据集
+        $this->assign('page',$show);// 赋值分页输出
+        $this->assign('totalcount',$count);//总条数
+        $this->assign("pagenum",$pagenum);
+        $this->assign("txtkeywords",$searchtxt);
+        $this->display(); // 输出模板
+    }
+    
+    /***
+     * @time 2016/06/29
+     * @function 配送方式修改
+     */
+    public function express_edit(){
+        $eid = isset($_REQUEST['id'])?$_REQUEST['id']:0;
+        if($eid == 0){$this->error('获取不到修改的模块数据！');die();}
+        if(IS_POST){//提交过来的修改数据
+            $res = D("Express")->DataSave();
+            if($res == "false"){$this->error('修改失败！');die();}
+            $this->redirect("Order/express_list",array("flag"=>"3"));
+        }else{
+            $d = D("Express")->getTabList("","",array("id"=>$eid),"","1");
+            $this->assign("d",$d);
+        }
+        $this->display();
+    }
+    
+    /***
+     * @time 2016/06/29
+     * @function 配送新增
+     */
+    public function express_add(){
+        if(IS_POST){
+            $res = D("Express")->dataAdd();
+            if($res == "false"){$this->error('新增失败了！');die();}
+            $this->redirect("Order/express_list",array("flag"=>"1"));die();
+        }
+        $this->display();
+    }
+    
+    /***
+     * @time 2016/07/04
+     * @functon 订单详情
+     */
+    public function order_detail(){
+        $orderid = isset($_REQUEST['id'])?$_REQUEST['id']:"";
+        if($orderid == ""){$this->error('非法操作！');die();}
+        
+        //$ordertotal = 0;//订单总金额总计
+        //1、订单相关信息（收货地址等）
+            $orderinfo = D("Orders")->getTabList("","id asc",array("id"=>$orderid),"","1");
+        //2、会员相关信息,组信息
+            $userinfo = D("Users")->getTabList("","id asc",array("id"=>$orderinfo['user_id']),"","1");
+            $groupinfo = D("UserGroups")->getTabList("","id asc",array("id"=>$userinfo['group_id']),"","1");
+            
+        //3、支付配送相关信息
+            $payinfo = D("Payment")->getTabList("","id asc",array("id"=>$orderinfo['payment_id']),"","1");
+            $expressinfo = D("Express")->getTabList("","id asc",array("id"=>$orderinfo['express_id']),"","1");
+        //4、商品列表
+            $productsinfo = D("OrderGoods")->getTabList("","id asc",array("order_id"=>$orderinfo['id']));
+            foreach($productsinfo as $k=>$v){
+                $productsinfo[$k]['totalmoney'] = $v['real_price']*$v['quantity'];
+                $productsinfo[$k]['totalpoint'] = $v['point']*$v['quantity'];
+            }
+            
+        //5、订单统计
+        /* $expressfee = empty($orderinfo['express_fee'])?0:$orderinfo['express_fee'];
+        $payfee = empty($orderinfo['payment_fee'])?0:$orderinfo['payment_fee'];
+        $invoicefee = empty($orderinfo['invoice_taxes'])?0:$orderinfo['invoice_taxes'];
+        $producttotal = empty($orderinfo['payable_amount'])?0:$orderinfo['payable_amount'];
+        $pointtotal = empty($orderinfo['point'])?0:$orderinfo['point'];
+        $ordertotal = ($producttotal)+($pointtotal)+$expressfee+$payfee+$invoicefee; */
+        
+        $allExpress = D("Express")->getTabList(array("id","title"),"id asc");     
+            
+        $this->assign("allExpress",$allExpress);    
+        $this->assign("plist",$productsinfo);
+        /* $this->assign("producttotal",$producttotal);
+        $this->assign("pointtotal",$pointtotal);
+        $this->assign("ordertotal",$ordertotal); */
+        $this->assign("orderinfo",$orderinfo);
+        $this->assign("userinfo",$userinfo);
+        $this->assign("groupinfo",$groupinfo);
+        $this->assign("payinfo",$payinfo);
+        $this->assign("expressinfo",$expressinfo);
+        $this->display();
+    }
+    
+    /***
+     * @time 2016/07/05
+     * @function 更改订单状态
+     */
+    public function edit_order_status(){
+        $orderno = isset($_REQUEST['order_no'])?$_REQUEST['order_no']:"";
+        $edittype = isset($_REQUEST['edit_type'])?$_REQUEST['edit_type']:"";
+        if($orderno == ""){
+            echo json_encode(array("code"=>0,"message"=>'获取不到订单相关信息！'));die();
+        }
+        $orderdata = D("Orders")->getTabList("","id asc",array("order_no"=>$orderno),"","1");
+        switch($edittype){
+            case 'order_payment'://确认付款
+               $d['status'] = 2;
+               $d['payment_status'] = 2;
+               $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+               if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改订单失败！'));die();}
+               echo json_encode(array("code"=>200,"message"=>'修改订单成功！'));
+             break;
+             
+            case 'order_confirm'://确认订单
+               $d['status'] = 3;
+               $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+               if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改订单失败！'));die();}
+               echo json_encode(array("code"=>200,"message"=>'修改订单成功！'));
+             break;
+             
+            case 'edit_order_express'://确认发货
+               $d['status'] = 4;
+               $d['express_id'] = isset($_REQUEST['expressid'])?$_REQUEST['expressid']:"";
+               $d['express_no'] = isset($_REQUEST['expressno'])?$_REQUEST['expressno']:"";
+               if($d['express_no'] == ""){echo json_encode(array("code"=>0,"message"=>'快递单号不能为空！'));die();}
+               $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+               if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改订单失败！'));die();}
+               echo json_encode(array("code"=>200,"message"=>'修改订单成功！'));
+             break;
+             
+            case 'order_complete'://确认完成
+               $d['status'] = 5;
+               $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+               if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改订单失败！'));die();}
+               echo json_encode(array("code"=>200,"message"=>'修改订单成功！'));
+             break;
+             
+            case 'order_cancel'://取消订单
+               $d['status'] = 6;
+               $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+               if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改订单失败！'));die();}
+               echo json_encode(array("code"=>200,"message"=>'修改订单成功！'));
+             break;
+             
+            case 'order_invalid'://作废订单
+               $d['status'] = 7;
+               $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+               if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改订单失败！'));die();}
+               echo json_encode(array("code"=>200,"message"=>'修改订单成功！'));
+             break;
+             
+            case 'edit_invoice_taxes'://修改发票
+                $num = isset($_REQUEST['invoice_taxes'])?$_REQUEST['invoice_taxes']:0;
+                $d['invoice_taxes'] = $num;
+                $d['order_amount'] = ($orderdata['real_amount'])+($orderdata['express_fee'])+($orderdata['payment_fee'])+($num);
+                $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+                if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改发票失败！'));die();}
+                echo json_encode(array("code"=>200,"message"=>'修改发票成功！'));
+           break; 
+           
+            case 'edit_payment_fee'://修改支付手续费
+                $num = isset($_REQUEST['payment_fee'])?$_REQUEST['payment_fee']:0;
+                $d['payment_fee'] = $num;
+                $d['order_amount'] = ($orderdata['real_amount'])+($orderdata['express_fee'])+($orderdata['invoice_taxes'])+($num);
+                $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+                if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改支付手续费失败！'));die();}
+                echo json_encode(array("code"=>200,"message"=>'修改支付手续费成功！'));
+           break;
+           
+            case 'edit_express_fee'://修改物流费
+                $num = isset($_REQUEST['express_fee'])?$_REQUEST['express_fee']:0;
+                $d['express_fee'] = $num;
+                $d['order_amount'] = ($orderdata['real_amount'])+($orderdata['payment_fee'])+($orderdata['invoice_taxes'])+($num);
+                $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+                if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改物流费失败！'));die();}
+                echo json_encode(array("code"=>200,"message"=>'修改物流费成功！'));
+           break; 
+           
+            case 'edit_real_amount'://修改商品总额
+                $num = isset($_REQUEST['real_amount'])?$_REQUEST['real_amount']:0;
+                $d['real_amount'] = $num;
+                $d['order_amount'] = ($orderdata['express_fee'])+($orderdata['payment_fee'])+($orderdata['invoice_taxes'])+($num);
+                $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+                if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改商品总额失败！'));die();}
+                echo json_encode(array("code"=>200,"message"=>'修改商品总额成功！'));
+           break; 
+           
+            case 'edit_order_remark'://修改备注
+                $remark = isset($_REQUEST['remark'])?$_REQUEST['remark']:"";
+                $d['remark'] = $remark;
+                $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+                if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改备注失败！'));die();}
+                echo json_encode(array("code"=>200,"message"=>'修改备注成功！'));
+           break; 
+           
+            case 'edit_order_mess'://修改收货地址
+                $d['accept_name'] = isset($_REQUEST['acceptname'])?$_REQUEST['acceptname']:"";
+                $d['area'] = isset($_REQUEST['area'])?$_REQUEST['area']:"";
+                $d['address'] = isset($_REQUEST['address'])?$_REQUEST['address']:"";
+                $d['post_code'] = isset($_REQUEST['postcode'])?$_REQUEST['postcode']:"";
+                $d['mobile'] = isset($_REQUEST['mobile'])?$_REQUEST['mobile']:"";
+                $d['telphone'] = isset($_REQUEST['telphone'])?$_REQUEST['telphone']:"";
+                $d['email'] = isset($_REQUEST['email'])?$_REQUEST['email']:"";
+                
+                $res = D("Orders")->changeOrderData($d,array("order_no"=>$orderno));
+                if($res == "false"){echo json_encode(array("code"=>0,"message"=>'修改失败！'));die();}
+                echo json_encode(array("code"=>200,"message"=>'修改成功！'));
+           break; 
+           
+           
+           
+        }
+        
+        
+    }
+    
+    /**
+     * @time 2016/07/05
+     * @function  更改收货地址(存在bug)
+     */
+    public function dialog_accept(){
+        if(IS_POST){
+          $orderid = isset($_REQUEST['id'])?$_REQUEST['id']:"";
+          if($orderid == ""){die("非法操作订单");}
+          $d['accept_name'] = I("accept_name");
+          $d['area'] = I("area");
+          $d['address'] = I("address");
+          $d['post_code'] = I("postcode");
+          $d['mobile'] = I("mobile");
+          $d['telphone'] = I("telphone");
+          $d['email'] = I("email");
+          $res = D("Orders")->changeOrderData($d,array("id"=>$orderid));
+          if($res == "false"){die("编辑订单信息失败了");}
+          redirect("Order/order_detail/id/".$orderid);
+            
+        }else{
+            $orderno = isset($_REQUEST['order_no'])?$_REQUEST['order_no']:"";
+             $orderdata = D("Orders")->getTabList("","id asc",array("order_no"=>$orderno),"","1");
+             $this->assign("edata",$orderdata);
+             $this->display();
+        }
+    }
+    
+       
+}

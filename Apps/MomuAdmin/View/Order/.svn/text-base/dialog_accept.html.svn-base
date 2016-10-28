@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="__PUBLIC__/Admin/scripts/artdialog/ui-dialog.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Admin/skin/default/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/jquery/jquery-1.11.2.min.js"></script>
+
+<body class="mainbody">
+<form method="post" action="__URL__/dialog_accept/id/{{$edata['id']}}" id="form1">
+
+<div class="tab-content">
+  <dl>
+    <dt>收件人</dt>
+    <dd><input name="accept_name" type="text" value="{{$edata['accept_name']}}" id="accept_name" class="input normal" /> </dd>
+  </dl>
+  <dl>
+    <dt>收件省市区</dt>
+    <dd>
+      <input name="area" type="text" value="{{$edata['area']}}" id="area" class="input normal" />
+    </dd>
+  </dl>
+  <dl>
+    <dt>详细地址</dt>
+    <dd>
+      <input name="address" type="text" value="{{$edata['address']}}" id="address" class="input normal" />
+    </dd>
+  </dl>
+  <dl>
+    <dt>邮政编码</dt>
+    <dd>
+      <input name="postcode" type="text" value="{{$edata['post_code']}}" id="postcode" class="input normal" />
+    </dd>
+  </dl>
+  <dl>
+    <dt>手机</dt>
+    <dd>
+      <input name="mobile" type="text" value="{{$edata['mobile']}}" id="mobile" class="input normal" />
+    </dd>
+  </dl>
+  <dl>
+    <dt>电话</dt>
+    <dd>
+      <input name="telphone" type="text" value="{{$edata['telphone']}}" id="telphone" class="input normal" />
+    </dd>
+  </dl>
+  <dl>
+    <dt>邮箱</dt>
+    <dd>
+      <input name="email" type="text" value="{{$edata['email']}}" id="email" class="input normal" />
+    </dd>
+  </dl>
+</div>
+<!--/内容-->
+
+<!--工具栏-->
+<!-- <div class="page-footer">
+  <div class="btn-wrap">
+    <input type="submit" name="btnSubmit" value="提交保存" id="btnSubmit" class="btn" />
+    <input name="btnReturn" type="button" value="返回列表" class="btn yellow" onclick="javascript:history.back(-1);" />
+  </div>
+</div>  -->
+<!--/工具栏-->
+
+</form>
+<script>
+
+var api = top.dialog.get(window);
+//设置按钮及事件
+
+	api.button([{
+	    value: '完成',
+	    callback: function () {
+	    	$("#form1").submit();
+	    	//api.close().remove();
+	    },
+        autofocus: true
+	}, {
+        value: '取消',
+        callback: function () { 
+        	api.close().remove();
+        	return false;
+        }
+    }]);
+
+</script>
+</body>
+</html>

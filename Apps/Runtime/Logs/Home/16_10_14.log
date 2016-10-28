@@ -1,0 +1,1462 @@
+[ 2016-10-14T18:25:34+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476440734567
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:25:47+08:00 ] 127.0.0.1 /index.php/Home/Users/userLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `user_name` = 'zht123' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:25:58+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476440758619
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:21+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476440841651
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-10-14T18:27:22+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476440842507
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:24+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476440844618
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:25+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476440845504
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:26+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476440846392
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:27+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476440847144
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Users/userLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/select01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index3-02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Index/images/book01.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index04-01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Index/images/book02.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index2-icon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Index/images/index01.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:35+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index3-01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:40+08:00 ] 127.0.0.1 /index.php/Home/Users/userinfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=1 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:47+08:00 ] 127.0.0.1 /index.php/Home/Users/uploadAvatar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:27:53+08:00 ] 127.0.0.1 /index.php/Home/Users/uploadIdCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: UPDATE `m_users` SET `avatar`='/userupload//201610/14/5800b328e4d35.jpg' WHERE `id` = 4 [ RunTime:0.0312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:28:09+08:00 ] 127.0.0.1 /index.php/Home/Users/uploadAvatar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0156s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:28:16+08:00 ] 127.0.0.1 /index.php/Home/Users/userInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=1 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:28:51+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='2' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:28:53+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='5' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:29:01+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0156s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='11' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:31:46+08:00 ] 127.0.0.1 /index.php/Home/Users/userInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=1 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:31:52+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='4' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:31:55+08:00 ] 127.0.0.1 /index.php/Home/Users/userinfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `m_areas` WHERE `area_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `area_name` FROM `m_areas` WHERE `area_id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `m_users` SET `nick_name`='nixk',`sex`='保密',`birthday`='2016-10-20',`address`='福建南平' WHERE `id` = 4 [ RunTime:0.0312s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:31:56+08:00 ] 127.0.0.1 /index.php/Home/Users/userInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=1 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-10-14T18:38:31+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='6' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:38:33+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='4' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:38:34+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='3' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:38:37+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='14' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:38:47+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='0' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:38:51+08:00 ] 127.0.0.1 /index.php/Home/Users/loadCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 and parent_id='2' )  [ RunTime:0.0000s ]
+
+[ 2016-10-14T18:40:32+08:00 ] 127.0.0.1 /index.php/Home/Users/userInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=1 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 )  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:43:42+08:00 ] 127.0.0.1 /index.php/Home/Users/savePwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:43:43+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:45:29+08:00 ] 127.0.0.1 /index.php/Home/Users/savePwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:45:30+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-10-14T18:45:51+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476441951738
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-14T18:46:04+08:00 ] 127.0.0.1 /index.php/Home/Users/savePwd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0156s ]
+SQL: UPDATE `m_users` SET `password`='e10adc3949ba59abbe56e057f20f883e' WHERE `id` = 4 [ RunTime:0.0156s ]
+
+[ 2016-10-14T18:47:27+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1476442047670
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `m_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `m_statistics` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `m_statistics` ORDER BY count desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_value` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_value` WHERE `channel_id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `m_market_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `m_market_category` WHERE `channel_id` = 22 AND `parent_id` = 0 AND `is_top` = 2  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `m_advertisement_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 0 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 9 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 20 AND `channel_id` = 23  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 24 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 28 AND `channel_id` = 23  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `m_advertisement_category` WHERE `parent_id` = 32 AND `channel_id` = 23  [ RunTime:0.0000s ]
+SQL: select id,img_url,title from m_advertisement_value a where exists( select articleid from m_adv_cat_relation acr where categoryid=2 and articleid=a.id) order by  sort_id desc limit 1 [ RunTime:0.0000s ]
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered D:\wamp\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+

@@ -1,0 +1,70 @@
+<?php
+/**
+ * 商品模块
+ * User: 苏东羽
+ * Date: 2016/6/12
+ * Time: 15:13
+ */
+namespace Home\Action;
+class GoodsAction extends CommonAction{
+
+    /**商品列表**/
+    public function index(){
+        $id  = I("id");
+        $sid = I("sid");
+
+
+        $m = D("Home/ArticleCategory");
+        /**获取二级分类**/
+        $getSecondCategory = $m->getSecondCategory($id);
+        // dump($getSecondCategory);
+
+        $this->assign("cate",$getSecondCategory?$getSecondCategory:"");
+        $idString = "";
+        /**判断顶级分类下是否存在子类**/
+        if(!empty($getSecondCategory)){
+            /**将二级分类所有ID拼接成字符串**/
+            $count = count($getSecondCategory);
+            for($i=0;$i<$count;$i++){
+                if($i<($count-1)){
+                    $idString .= $getSecondCategory[$i]["id"].",";
+                }else{
+                    $idString .= $getSecondCategory[$i]["id"];
+                }
+            }
+        }else{
+            $idString= $id;
+        }
+<<<<<<< .mine
+=======
+
+>>>>>>> .r15
+        /**获取商品**/
+        $m = D("Home/Article");
+        $goods=$m->getGoods($idString);
+        
+        $pager = new \Think\Page($goods['total'],$goods['pageSize']);// 实例化分页类 传入总记录数和每页显示的记录数
+        $goods['page'] = $pager->show();
+        // dump($goods);
+        $this->assign('Hot',D("Article")->hot('5'));//热门内容
+        $this->assign("list",$goods);
+        $this->assign("id",$id);
+        $this->assign("sid",$sid);
+        $this->display();
+    }
+
+    /**商品详情**/
+    public function goodDetails(){
+        $userId  = $_SESSION['USERS']['id'];
+        $this->assign('userId',$userId);
+        $id = I("id");
+        $m  =  D("Home/Article");
+        $goodsInfo = $m->getGoodDetails();
+        $comment   = D("Home/Article")->article_comment($id);
+        // dump($comment);
+        $this->assign('comment',$comment);//评价信息
+        $this->assign('Hot',D("Article")->hot('5'));//热门内容
+        $this->assign('goodsInfo',$goodsInfo);
+        $this->display();
+    }
+}

@@ -1,0 +1,66 @@
+
+	<link rel="stylesheet" href="__PUBLIC__/Home/css/ScrollbarY.css">
+	<script src="__PUBLIC__/Home/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<div class="main clearfix">
+		<include file="Public/left" />
+		<div class="main-right">
+			<div class="right-top">
+				<div class="top-inner w740">
+					<p class="top-text"><img src="__PUBLIC__/Home/images/icon/personal04.png" alt="">写笔记</p>
+					<a href="{{:U('Book/readingNotes')}}" class="return-a">返回列表</a>
+				</div>
+			</div>
+			<div class="right-inner note-inner w740">
+				<div class="note-inp">
+					<span class="note-left"><i class="hongxing">*</i>输入笔记标题：</span>
+					<input type="text" class="bjbt">
+				</div>
+				<div class="note-inp">
+					<span class="note-left"><i class="hongxing">*</i>输入笔记内容：</span>
+					<textarea name="" id=""></textarea>
+				</div>
+				<div class="note-inp clearfix">
+					<span class="note-left">匹配图书：</span>
+					<div class="pp-box">
+						<div class="pp-book">
+							<input type="text" placeholder="直接输入或搜索书本名称">
+							<span class="note-close"></span>
+						</div>
+						<div class="down-list">
+							<div class="down-inner">
+								<ul>
+									<li>两只小猪加比索</li>
+									<li>和风一般的日子</li>
+									<li>我与童话书中的故事谈谈心</li>
+									<li>七个小矮人的故事</li>
+									<li>早起的鸟儿有虫吃</li>
+									<li>十万个为什么</li>
+									<li>两只小猪加比索</li>
+									<li>和风一般的日子</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="note-file">上传笔记</a>
+			</div>
+		</div>
+	</div>
+
+	<!--弹窗 遮罩-->
+	<div class="mask"></div>
+	<div class="pop file-success">
+		<div class="pop-img"></div>
+		<div class="pop-text">您的笔记已经上传成功！</div>
+		<a href="#" class="pop-close"></a>
+	</div>
+	<!--滚动条-->
+	<script type='text/javascript'>
+		$(function(){
+			$(window).load(function(){
+				$(".down-inner").mCustomScrollbar();
+			});
+		})
+	</script>
+</body>
+</html>

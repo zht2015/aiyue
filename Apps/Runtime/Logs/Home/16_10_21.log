@@ -1,0 +1,799 @@
+[ 2016-10-21T10:45:03+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.870076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.124049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.124665s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.060774s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.061182s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.390636s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.390930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.035601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.035832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.026033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.026771s ]
+
+[ 2016-10-21T10:45:25+08:00 ] 127.0.0.1 /index.php/Home/Users/userLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002317s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.217577s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.218105s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\689f64c898c4bad0a7fd6cfdd2dea721.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.200853s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.201474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000865s ]
+
+[ 2016-10-21T10:45:29+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2016-10-21T10:45:35+08:00 ] 127.0.0.1 /index.php/Home/Users/userRegister.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000363s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000770s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\8ec10f0c762d61428e23e875b58dd3d8.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.179647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.179870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001927s ]
+
+[ 2016-10-21T10:45:49+08:00 ] 127.0.0.1 /index.php/Home/Users/userLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\689f64c898c4bad0a7fd6cfdd2dea721.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013814s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2016-10-21T10:45:49+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000899s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001260s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2016-10-21T10:46:30+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000243s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000408s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.112807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113069s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.038619s ]
+
+[ 2016-10-21T10:47:36+08:00 ] 127.0.0.1 /index.php/Home/Users/userLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\689f64c898c4bad0a7fd6cfdd2dea721.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.259934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.260189s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004931s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011044s ]
+
+[ 2016-10-21T10:47:36+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001780s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001214s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001543s ]
+
+[ 2016-10-21T10:47:46+08:00 ] 127.0.0.1 /index.php/Home/Common/verify.html?1477018066129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002890s ]
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 119 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 207 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 227 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [8] A non well formed numeric value encountered E:\wamp64\www\aiyue\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002738s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Users/userLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001744s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `m_users` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0566s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001473s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000433s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093023s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093255s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001916s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002810s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/select01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000934s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Index/images/index01.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001274s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Index/images/book01.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index3-01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index3-02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001317s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index04-01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001162s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index2-icon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+
+[ 2016-10-21T10:47:53+08:00 ] 127.0.0.1 /index.php/Home/Index/images/book02.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+
+[ 2016-10-21T10:47:54+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index2-icon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+
+[ 2016-10-21T10:47:54+08:00 ] 127.0.0.1 /index.php/Home/Index/images/index01.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001345s ]
+
+[ 2016-10-21T10:47:54+08:00 ] 127.0.0.1 /index.php/Home/Index/images/book01.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001251s ]
+
+[ 2016-10-21T10:47:54+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/select01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001196s ]
+
+[ 2016-10-21T10:48:02+08:00 ] 127.0.0.1 /index.php/Home/Users/userinfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002637s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0608s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=1 )  [ RunTime:0.0787s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 )  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000372s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.253665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.253894s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006259s ]
+
+[ 2016-10-21T10:48:37+08:00 ] 127.0.0.1 /index.php/Home/Book/bookList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001102s ]
+SQL: SHOW COLUMNS FROM `m_booklist` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_booklist` WHERE `user_id` = 4 AND `is_del` = 0 LIMIT 1   [ RunTime:0.1870s ]
+SQL: SELECT * FROM `m_booklist` WHERE `user_id` = 4 AND `is_del` = 0 ORDER BY C_time desc LIMIT 0,1   [ RunTime:0.0791s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000377s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.112203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112513s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001028s ]
+
+[ 2016-10-21T10:49:38+08:00 ] 127.0.0.1 /index.php/Home/Book/makeBookList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.067655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.068079s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000569s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000961s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.864326s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.864630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.159828s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.160150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004367s ]
+
+[ 2016-10-21T10:50:30+08:00 ] 127.0.0.1 /index.php/Home/Book/makeBookList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001820s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000347s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000585s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.154120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.154384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014912s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001800s ]
+
+[ 2016-10-21T11:00:35+08:00 ] 127.0.0.1 /index.php/Home/Users/userinfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008802s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0939s ]
+SQL: SHOW COLUMNS FROM `m_areas` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=1 )  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `m_areas` WHERE ( area_type=2 )  [ RunTime:0.0063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000444s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000883s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.499989s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.500419s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013714s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012457s ]
+
+[ 2016-10-21T11:02:01+08:00 ] 127.0.0.1 /index.php/Home/Users/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001117s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000412s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.597616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.597777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001238s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001573s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/select01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index3-02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index04-01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index3-01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/book02.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/index01.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index2-icon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/select01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index2-icon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000951s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/index01.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000798s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index3-01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000927s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index3-02.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/book02.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/icon/index04-01.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000142s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000879s ]
+
+[ 2016-10-21T11:02:02+08:00 ] 127.0.0.1 /index.php/Home/Index/images/book01.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+
+[ 2016-10-21T11:02:06+08:00 ] 127.0.0.1 /index.php/Home/Users/userRegister.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000409s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000959s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\8ec10f0c762d61428e23e875b58dd3d8.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.207555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.207784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001656s ]
+
+[ 2016-10-21T11:17:16+08:00 ] 127.0.0.1 /index.php/Home/Users/userRegister.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.043988s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004315s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000439s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\8ec10f0c762d61428e23e875b58dd3d8.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.563269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.563593s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004693s ]
+
+[ 2016-10-21T11:17:33+08:00 ] 127.0.0.1 /index.php/Home/Users/userRegister.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.1103s ]
+
+[ 2016-10-21T11:17:33+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzi/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+ERR: 非法操作:tjzi
+
+[ 2016-10-21T11:18:08+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2016-10-21T11:30:54+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.357490s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.357894s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.171528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.172039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.224701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.225209s ]
+
+[ 2016-10-21T11:30:55+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001423s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000368s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000784s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.153513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.153916s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001957s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002351s ]
+
+[ 2016-10-21T11:48:54+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.024454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024664s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000400s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.734384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.734794s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.021794s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.033643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.034253s ]
+
+[ 2016-10-21T11:53:50+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000105s ]
+INFO: [ app_init ] --END-- [ RunTime:0.051134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.035904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036261s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.070399s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.070679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.075981s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.076282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008757s ]
+
+[ 2016-10-21T11:54:36+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000402s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001148s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.172141s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.172534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001987s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001760s ]
+
+[ 2016-10-21T11:55:49+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000133s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001850s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000374s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000779s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.268158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.268469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001361s ]
+
+[ 2016-10-21T11:56:50+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000106s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002369s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000544s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001429s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.268648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.268993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.037187s ]
+INFO: [ app_end ] --END-- [ RunTime:0.037547s ]
+
+[ 2016-10-21T11:57:39+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000310s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000682s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.136182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.136494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001179s ]
+
+[ 2016-10-21T12:03:18+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.086924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.079965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.080449s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000508s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.772652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.772967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.017193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010201s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010398s ]
+
+[ 2016-10-21T12:06:25+08:00 ] 127.0.0.1 /index.php/Home/Users/tjzl/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.053112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.053402s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000385s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000787s ]
+NOTIC: [8] Undefined variable: user E:\wamp64\www\aiyue\Apps\Runtime\Cache\Home\9402031151289688e6dd0620fd6c3477.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.563441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.563713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.028189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.028570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007212s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008086s ]
+

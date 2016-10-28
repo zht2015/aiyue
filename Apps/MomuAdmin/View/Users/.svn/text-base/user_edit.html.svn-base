@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>编辑会员</title>
+<link href="__PUBLIC__/Admin/scripts/artdialog/ui-dialog.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Admin/skin/default/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/jquery/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/datepicker/WdatePicker.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/artdialog/dialog-plus-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/scripts/webuploader/webuploader.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/js/uploader.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/js/laymain.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Admin/js/common.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //初始化表单验证
+        $("#form1").initValidform();
+        //初始化上传控件
+        $(".upload-img").InitUploader({ sendurl: "{{:U('UploadJson/uploadImg')}}", swf: "__PUBLIC__/Admin/scripts/webuploader/uploader.swf" });
+    });
+</script>
+</head>
+
+<body class="mainbody">
+<form method="post" action="__URL__/user_edit" id="form1">
+<input type="hidden" name="id" value="{{$edata['id']}}" />
+<!--导航栏-->
+<div class="location">
+  <a href="__URL__/user_list" class="back"><i></i><span>返回列表页</span></a>
+  <a href="" class="home"><i></i><span>首页</span></a>
+  <i class="arrow"></i>
+  <a href=""><span>会员管理</span></a>
+  <i class="arrow"></i>
+  <span>新增会员</span>
+</div>
+<div class="line10"></div>
+<!--/导航栏-->
+
+<!--内容-->
+<div id="floatHead" class="content-tab-wrap">
+  <div class="content-tab">
+    <div class="content-tab-ul-wrap">
+      <ul>
+        <li><a class="selected" href="javascript:;">基本资料</a></li>
+        <li><a href="javascript:;">账户信息</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="tab-content">
+  <dl>
+    <dt>所属组别</dt>
+    <dd>
+      <div class="rule-single-select">
+        <select name="ddlGroupId" id="ddlGroupId" datatype="*" errormsg="请选择组别" sucmsg=" ">
+		<option value="">请选择组别...</option>
+		<volist name="groups" id="vo">
+			<if condition="$vo['id'] eq $edata['group_id']">
+				<option  value="{{$vo['id']}}" selected>{{$vo['title']}}</option>
+			<else/>
+				<option  value="{{$vo['id']}}">{{$vo['title']}}</option>
+			</if>
+		</volist>
+
+</select>
+      </div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>用户状态</dt>
+    <dd>
+      <div class="rule-multi-radio">
+        <span id="rblStatus">
+        	<input id="rblStatus_0" type="radio" name="rblStatus" value="0"  <eq name="edata['status']" value="0">checked</eq> />
+        	<label for="rblStatus_0">正常</label>
+        	<input id="rblStatus_1" type="radio" name="rblStatus" value="1" <eq name="edata['status']" value="1">checked</eq> />
+        	<label for="rblStatus_1">待验证</label>
+        	<input id="rblStatus_2" type="radio" name="rblStatus" value="2" <eq name="edata['status']" value="2">checked</eq> />
+        	<label for="rblStatus_2">待审核</label>
+        	<input id="rblStatus_3" type="radio" name="rblStatus" value="3" <eq name="edata['status']" value="3">checked</eq> />
+        	<label for="rblStatus_3">禁用</label>
+        </span>
+      </div>
+      <span class="Validform_checktip">*禁用账户无法登录</span>
+    </dd>
+  </dl>
+  <dl>
+    <dt>用户名</dt>
+    <dd><input name="txtUserName" type="text" value="{{$edata['user_name']}}" id="txtUserName" class="input normal" datatype="*2-100" sucmsg=" " /> <span class="Validform_checktip">*登录的用户名，支持中文</span></dd>
+  </dl> 
+  <dl>
+    <dt>登录密码</dt>
+    <dd><input name="txtPassword" value="" type="password" id="txtPassword" class="input normal" datatype="" nullmsg="请设置密码" errormsg="密码范围在6-20位之间" sucmsg=" " /> <span class="Validform_checktip">*登录的密码，至少6位，为空则与上次密码一致</span></dd>
+  </dl>
+  <dl>
+    <dt>确认密码</dt>
+    <dd><input name="txtPassword1" value="" type="password" id="txtPassword1" class="input normal" datatype="" recheck="txtPassword" nullmsg="请再输入一次密码" errormsg="两次输入的密码不一致" sucmsg=" " /> <span class="Validform_checktip">*再次输入密码 为空则与上次密码一致</span></dd>
+  </dl>
+  <dl>
+    <dt>邮箱账号</dt>
+    <dd><input name="txtEmail" value="{{$edata['email']}}" type="text" id="txtEmail" class="input normal" datatype="*0-50" sucmsg=" " /> <span class="Validform_checktip">*取回密码时用到</span></dd>
+  </dl>
+  <dl>
+    <dt>用户昵称</dt>
+    <dd><input name="txtNickName" value="{{$edata['nick_name']}}" type="text" id="txtNickName" class="input normal" /></dd>
+  </dl>
+  <dl>
+    <dt>上传头像</dt>
+    <dd>
+      <input name="txtAvatar" type="text" value="{{$edata['avatar']}}" id="txtAvatar" class="input normal upload-path" />
+      <div class="upload-box upload-img"></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>用户性别</dt>
+    <dd>
+      <div class="rule-multi-radio">
+        <span id="rblSex">
+        	<input id="rblSex_0" type="radio" name="rblSex" value="保密" <eq name="edata['sex']" value="保密">checked="checked"</eq> />
+        	<label for="rblSex_0">保密</label>
+        	<input id="rblSex_1" type="radio" name="rblSex" value="男" <eq name="edata['sex']" value="男">checked="checked"</eq> />
+        	<label for="rblSex_1">男</label>
+        	<input id="rblSex_2" type="radio" name="rblSex" value="女" <eq name="edata['sex']" value="女">checked="checked"</eq> />
+        	<label for="rblSex_2">女</label>
+        </span>
+      </div>
+    </dd>
+  </dl>
+  <dl>
+    <dt>生日日期</dt>
+    <dd>
+      <input name="txtBirthday" value="{{$edata['birthday']}}" type="text" id="txtBirthday" class="input rule-date-input" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" datatype="" errormsg="请选择正确的日期" sucmsg=" " />
+    </dd>
+  </dl>
+  <dl>
+    <dt>手机号码</dt>
+    <dd><input name="txtMobile" value="{{$edata['mobile']}}" type="text" id="txtMobile" class="input normal" /></dd>
+  </dl>
+  <dl>
+    <dt>电话号码</dt>
+    <dd><input name="txtTelphone" value="{{$edata['telphone']}}" type="text" id="txtTelphone" class="input normal" /></dd>
+  </dl>
+  <dl>
+    <dt>QQ号码</dt>
+    <dd><input name="txtQQ" type="text" value="{{$edata['qq']}}" id="txtQQ" class="input normal" /></dd>
+  </dl>
+  <dl>
+    <dt>MSN</dt>
+    <dd><input name="txtMsn" type="text" value="{{$edata['msn']}}" id="txtMsn" class="input normal" /></dd>
+  </dl>
+  <dl>
+    <dt>通讯地址</dt>
+    <dd><input name="txtAddress" value="{{$edata['address']}}" type="text" id="txtAddress" class="input normal" /></dd>
+  </dl>
+</div>
+
+<div class="tab-content" style="display:none;">
+  <dl>
+    <dt>账户金额</dt>
+    <dd>
+      <input name="txtAmount" value="{{$edata['amount']}}" type="text"  id="txtAmount" class="input small" datatype="/^(([1-9]{1}\d*)|([0]{1}))(\.(\d){1,2})?$/" sucmsg=" " /> 元
+      <span class="Validform_checktip">*账户上的余额</span>
+    </dd>
+  </dl>
+  <dl>
+    <dt>账户积分</dt>
+    <dd>
+      <input name="txtPoint" type="text" value="{{$edata['point']}}" id="txtPoint" class="input small" datatype="n" sucmsg=" " /> 分
+      <span class="Validform_checktip">*积分也可做为交易</span>
+    </dd>
+  </dl>
+  <dl>
+    <dt>升级经验值</dt>
+    <dd>
+      <input name="txtExp" type="text" value="{{$edata['exp']}}" id="txtExp" class="input small" datatype="n" sucmsg=" " />
+      <span class="Validform_checktip">*根据积分计算得来，与积分不同的是只增不减</span>
+    </dd>
+  </dl>
+  <dl>
+    <dt>注册时间</dt>
+    <dd><span id="lblRegTime">{{$edata['reg_time']}}</span></dd>
+  </dl>
+  <dl>
+    <dt>注册IP</dt>
+    <dd><span id="lblRegIP">{{$edata['reg_ip']}}</span></dd>
+  </dl>
+  <dl>
+    <dt>最近登录时间</dt>
+    <dd><span id="lblLastTime">-</span></dd>
+  </dl>
+  <dl>
+    <dt>最近登录IP</dt>
+    <dd><span id="lblLastIP">-</span></dd>
+  </dl>
+</div>
+<!--/内容-->
+
+<!--工具栏-->
+<div class="page-footer">
+  <div class="btn-wrap">
+    <input type="submit" name="btnSubmit" value="提交保存" id="btnSubmit" class="btn" />
+    <input name="btnReturn" type="button" value="返回上一页" class="btn yellow" onclick="javascript:history.back(-1);" />
+  </div>
+</div>
+<!--/工具栏-->
+
+</form>
+</body>
+</html>

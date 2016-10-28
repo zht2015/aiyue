@@ -1,0 +1,136 @@
+
+
+	<link href="__PUBLIC__/Admin/scripts/datepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="__PUBLIC__/Admin/scripts/datepicker/WdatePicker.js"></script>
+	<div class="main clearfix">
+		<include file="Public:left" />
+
+		<div class="main-right">
+			<div class="right-top">
+				<div class="per-top">
+					<a href="__CONTROLLER__/userInfo.html" class="per-span cur-per">个人资料</a>
+					<a href="__CONTROLLER__/uploadAvatar.html" class="per-span">修改头像</a>
+					<a href="__CONTROLLER__/savePwd.html" class="per-span">修改密码</a>
+				</div>
+			</div>
+			<div class="right-inner per-center w740">
+				
+				<p class="per-title">亲爱的 <span class="color1">{{$user.user_name}}</span>，请完善您的资料：</p>
+				<div class="per-inp clearfix">
+					<span class="per-left">当前头像：</span>
+					<div class="per-right">
+						<div class="per-head">
+							<img src="{{$user.avatar}}" alt="">
+						</div>
+						<a href="__CONTROLLER__/uploadAvatar" class="revise-a">修改头像 >></a>
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">昵称：</span>
+					<div class="per-right per-name">
+						<input type="text" value="{{$user.nick_name}}" id="nickname" name="nickname">
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">性别：</span>
+
+					<div class="per-right per-sex">
+						<label for=""><input type="radio" name="sex" id="1" value="1" <eq name="user.sex" value="男">checked="checked"</eq> ><i></i>男</label>
+						<label for=""><input type="radio" name="sex" id="2" value="2" <eq name="user.sex" value="女">checked="checked"</eq> ><i class=""></i>女</label>
+						<label for=""><input type="radio" name="sex" id="0" value="0" <eq name="user.sex" value="保密">checked="checked"</eq> ><i class=""></i>保密</label>
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">出生年月：</span>
+					<div class="per-right born-date">
+					<input name="txtBirthday" value="{{$user['birthday']}}" type="text" id="txtBirthday" class="input rule-date-input" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" datatype="" errormsg="请选择正确的日期" sucmsg=" " />
+					</div>
+				</div>
+				<div class="per-inp clearfix">
+					<span class="per-left">所在地址：</span>
+					<div class="per-right per-loca">
+						<select name="province" id="province">
+							<option value="0">请选择省份</option>
+							<foreach name="province" item="vo" >
+							    <option value="{{$vo.area_id}}" <eq name="vo.area_id" value="$user.province">selected="selected"</eq> >
+							    	{{$vo.area_name}}
+							    </option>
+							</foreach>
+														
+						</select>
+						<select name="city" id="city">
+							<option value="0">请选择城市</option>
+							
+							<foreach name="city" item="vo" >
+								<eq name="vo.area_id" value="$user.city">
+									<option value="{{$vo.area_id}}"  selected="selected">{{$vo.area_name}}
+							    	</option>
+								</eq>
+							    
+							</foreach>
+						</select>
+					</div>
+				</div>
+
+				<a href="javascript:void(0);"  class="save-sure" onclick="saveUserInfo()">确认保存</a>
+				
+			</div>
+		</div>
+	</div>
+
+
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		/**性别单选按钮**/
+		$("input[type='radio']").each(function(){
+			var id= $(this).attr("id");
+			if($("#"+id).attr("checked")=="checked"){
+				$(this).next('i').addClass('select-sex')
+			}
+		});
+
+		/**获取城市**/
+		$("#province").change(function() {
+			$("#province option:selected").attr("selected","");
+			//console.log($("#province option:selected").text())
+			var provinceid = $("#province").val();
+			
+			$("#city").empty();
+			$("#city").append("<option value='0'>请选择城市</option>");
+	   		$.post("{{:U('Home/Users/loadCity')}}",{"provinceid":provinceid},function(data) {
+		    
+				for(var i = 0;i<data.length;i++){
+					$("#city").append("<option value="+data[i].area_id+">"+data[i].area_name+"</option>");
+				}
+			});
+	    });
+			
+
+		
+
+	});	
+
+	function saveUserInfo(){
+		var nickname = $('#nickname').val();
+
+		var sex  = $("input[name='sex']:checked").val();
+		var birthday = $('#txtBirthday').val();
+
+		var provinceid  = $("#province option:selected").val()
+		var cityid  = $("#city option:selected").val()
+		var provincename  = $("#province option:selected").text()
+		var cityname  = $("#city option:selected").text()
+		if(nickname==""){layer.tips('昵称不能为空', '#nickname');return false}
+		$.post("{{:U('Home/Users/userInfo')}}", {"nickname":nickname,"sex":sex,"birthday":birthday,"provinceid":provinceid,"cityid":cityid}, function(data){
+			console.log("cg");
+			if(data.status==1){
+				layer.msg("个人资料修改成功",{icon:6});
+			}else{
+				layer.msg("个人资料修改失败",{icon:5});
+			}
+		});
+	}
+
+</script>

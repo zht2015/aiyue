@@ -1,0 +1,108 @@
+<?php
+ /*
+ *后台管理用户操作
+ 2016.7.5
+ by 小明
+ */
+namespace MomuAdmin\Action;
+class ManagerAction extends CommonAction {
+  /*
+  管理员列表
+  */
+  public function manager_list(){
+    $count     = M('manager')->count();
+    $Page      = new \Think\Page($count,15);
+    $page_show = $Page->show();
+    $rs 	   = M('manager')->limit($Page->firstRow,$Page->listRows)->select();
+  	foreach ($rs as $k => $v) {
+  	  $rs[$k]['role_name'] = M('manager_role')->where(array('id'=>$v['role_id']))->getField('role_name');
+  	}
+  	// dump($rs);
+	$this->assign('page_show',$page_show);
+    $this->assign('rs',$rs);
+    $this->display();
+  }
+  /*
+  删除用户
+  */
+  public function del_user(){
+	$id = I('post.id');
+	$id = I('post.id');
+    $condition['id'] = array('IN',$id);
+    M('manager')->where($condition)->delete() ? success('删除成功',U('Manager/manager_list')) : fail('删除失败，未知错误');
+  
+  }
+  /*
+  添加管理员
+  */
+  public function add_manager(){
+
+  	if(IS_POST){
+  	  $d['role_id']   = I('post.role_id');
+  	  $d['role_type'] = I('post.role_type');
+  	  $d['user_name'] = I('post.userName');
+  	  $d['salt']      = getRandChar(6);
+  	  $d['password']  = md5(I('post.Password').$d['salt']);
+  	  $d['real_name'] = I('post.real_name');
+  	  $d['telephone'] = I('post.tel');
+  	  $d['email']     = I('post.email');
+  	  $d['is_lock']   = I('post.is_lock') == 'on' ? 1 : 0;
+  	  $d['add_time']  = date('Y-m-d H:i:s',time());
+
+  	  $rs = M('manager')->add($d);
+  	  if($rs){
+        redirect(U('Manager/manager_list'), 1, '增加成功！自动为您跳转中。。。');
+      }else{
+        $this->error('增加失败，未知错误');
+      }
+  	}else{
+  	  $this->assign('role',M('manager_role')->select());
+  	  $this->display();
+  	}
+  }
+  /*
+  编辑管理员
+  */
+  public function edit_manager(){
+
+  	if(IS_POST){
+  	  $uid = I('post.uid');
+  	  $d['role_id']   = I('post.role_id');
+  	  $d['role_type'] = I('post.role_type');
+  	  $d['salt']      = getRandChar(6);
+  	  $d['password']  = md5(I('post.Password').$d['salt']);
+  	  $d['real_name'] = I('post.real_name');
+  	  $d['telephone'] = I('post.tel');
+  	  $d['email']     = I('post.email');
+  	  $d['is_lock']   = I('post.is_lock') == 'on' ? 1 : 0;
+  	  $d['add_time']  = date('Y-m-d H:i:s',time());
+
+  	  $rs = M('manager')->where(array('id'=>$uid))->save($d);
+  	  if($rs){
+        redirect(U('Manager/manager_list'), 1, '修改成功！自动为您跳转中。。。');
+      }else{
+        $this->error('修改失败，未知错误');
+      }
+  	}else{
+  	  $this->assign('userInfo',M('manager')->find($uid));
+  	  $this->assign('role',M('manager_role')->select());
+  	  $this->display();
+  	}
+  }
+  /*
+  判断用户名是否存在
+  */
+  public function checkUserName(){
+    $name  = I('post.param');
+    $count = M('manager')->where(array('user_name'=>$name))->count();
+
+    if($count > 0){
+        $d['info']   = "该用户名已存在";
+        $d['status'] = "n";
+    }else{
+        $d['info']   = "该用户名可用";
+        $d['status'] = "y";
+    }
+    echo json_encode($d);
+  }
+}

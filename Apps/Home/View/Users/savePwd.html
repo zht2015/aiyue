@@ -1,0 +1,90 @@
+
+	<div class="main clearfix">
+		<include file="Public:left" />
+		
+		<div class="main-right">
+			<div class="right-top">
+				<div class="per-top">
+					<a <if condition="$user.user_type eq 0">href="{{:U('Users/userinfo')}}" <elseif condition="$user.user_type eq 1" />href="{{:U('Users/pressinfo')}}" </if> class="per-span">个人资料</a>
+					<a href="__CONTROLLER__/uploadAvatar.html" class="per-span">修改头像</a>
+					<a href="__CONTROLLER__/userPwd.html" class="per-span cur-per">修改密码</a>
+				</div>
+			</div>
+			<div class="right-inner w740">
+				<div class="change-title">修改您的密码：</div>
+				<div class="change-inner">
+					<div class="pass clearfix">
+						<span class="pass-left"><i class="hongxing">*</i>新密码：</span>
+						<div class="pass-right atten">
+							<div class="pass-wrap">
+								<input type="password" name='pwd' id="pwd" >
+								<i></i>
+							</div>
+							
+						</div>
+					</div>
+					<div class="pass clearfix">
+						<span class="pass-left"><i class="hongxing">*</i>密码确认：</span>
+						<div class="pass-right">
+							<div class="pass-wrap">
+								<input type="password" name='re_pwd' id="re_pwd">
+								<i></i>
+							</div>
+						</div>
+					</div>
+					<div class="pass code clearfix">
+						<span class="pass-left"><i class="hongxing">*</i>验证码：</span>
+						<div class="pass-right">
+							<div class="pass-wrap">
+								<input type="text" name='verify' id="verify">
+							</div>
+							<div class="code-box"><a href="javascript:verify();"><img id="verifyImg" src="{{:U('Home/Common/verify')}}"></a></div>
+							<a href="javascript:verify();">换一张</a>
+						</div>
+					</div>
+					<a href="javascript:void(0)" class="change-sure" onclick="savePwd();">确认修改</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+                                                                                                                                                                            
+
+	<script>
+    /**验证码更换**/
+    function verify(){
+        var time = new Date().getTime();
+        document.getElementById('verifyImg').src="{{:U('Home/Common/verify')}}?"+time;
+    }
+    function savePwd(){
+        var password=$("#pwd").val();
+        var re_password=$("#re_pwd").val();
+        var verify=$("#verify").val();
+        if(password==""){layer.tips('密码不能为空', '#pwd');return false}
+        if(re_password==""){layer.tips('确认密码不能为空', '#re_pwd');return false}
+        if(password!=re_password){layer.tips('两次密码不一致', '#re_pwd');return false}
+        if(verify==""){
+            layer.tips('验证码错误', '#verify', {
+                tips: [1, '#F90'],
+                time: 1000
+            });
+            return false;
+        }
+        $.post("{{:U('Home/Users/savePwd')}}",{"password":password,"re_password":re_password,"verify":verify},function(data) {
+            if(data.status==1){
+            	layer.msg("密码修改成功",{icon:6});
+                //location.href="{{:U('Home/Users/userInfo')}}";
+            }else if(data.status==-2){
+               layer.tips('验证码错误', '#verify', {
+                   tips: [1, '#F90'],
+                   time: 1000
+               });
+            }else if(data.status==-1){
+               layer.tips('两次密码不一致', '#re_pwd', {
+                   tips: [1, '#F90'],
+                   time: 1000
+               });
+            }
+        });
+    }
+</script>

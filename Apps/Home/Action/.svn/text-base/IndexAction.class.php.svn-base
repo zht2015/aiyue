@@ -1,0 +1,59 @@
+<?php
+/**
+ * 商城首页模块
+ * User: 苏东羽
+ * Date: 2016/6/12
+ * Time: 9:55
+ */
+namespace Home\Action;
+class IndexAction extends CommonAction{
+    /**商城首页**/
+    public function index(){
+        
+        //获取各广告位图片(根据广告位id确认所属的内容，倒序排列后，选择相应的数量)
+        //第二广告位
+        $adv2 = D("Article")->getArticleByCategoryid("75","3","sort_id desc");
+        //第三广告位
+        $adv3 = D("Article")->getArticleByCategoryid("76","3","sort_id desc");
+        //第四广告位
+        $adv4 = D("Article")->getArticleByCategoryid("77","1","sort_id desc");
+        //第五广告位
+        $adv5 = D("Article")->getArticleByCategoryid("78","1","sort_id desc");
+        //第六广告位
+        $adv6 = D("Article")->getArticleByCategoryid("79","1","sort_id desc");
+        //第七广告位
+        $adv7 = D("Article")->getArticleByCategoryid("80","1","sort_id desc");
+        //第八广告位
+        $adv8 = D("Article")->getArticleByCategoryid("81","1","sort_id desc");
+        //第九广告位
+        $adv9 = D("Article")->getArticleByCategoryid("82","1","sort_id desc");
+
+
+        //首页展示数据(4组)
+        $Hot       = D("Article")->hot('8');//热门内容
+        $Recommend = D("Article")->recommend();
+        //dump($Recommend);
+       
+        $this->assign("hot",$Hot);
+        $this->assign("Recommend",$Recommend);
+        $this->assign("adv2",$adv2);
+        $this->assign("adv3",$adv3);
+        $this->assign("adv4",$adv4);
+        $this->assign("adv5",$adv5);
+        $this->assign("adv6",$adv6);
+        $this->assign("adv7",$adv7);
+        $this->assign("adv8",$adv8);
+        $this->assign("adv9",$adv9);
+        $this->display();
+    }
+    /*
+    热点商品点击更换
+    num,数据长度
+    */
+    public function chage_hot(){
+        return_json(D('Article')->chage_hot('8'));
+    }
+    
+   
+
+}

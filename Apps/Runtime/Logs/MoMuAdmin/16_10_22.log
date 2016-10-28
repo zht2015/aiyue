@@ -1,0 +1,1629 @@
+[ 2016-10-22T09:53:03+08:00 ] 127.0.0.1 /index.php/momuAdmin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.026751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026978s ]
+SQL: SHOW COLUMNS FROM `m_manager` [ RunTime:0.0699s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.370077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.370590s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.032862s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.033179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.058755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.059102s ]
+
+[ 2016-10-22T09:53:18+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002219s ]
+SQL: SHOW COLUMNS FROM `m_manager` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_manager` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT * FROM `m_manager` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `m_manager_role_value` [ RunTime:0.0586s ]
+SQL: SELECT * FROM `m_manager_role_value` WHERE `role_id` = 1  [ RunTime:0.0004s ]
+
+[ 2016-10-22T09:53:18+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Index/LoginIndex.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `m_manager` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `m_manager` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] Undefined index: managerrole E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\aa1881ccbdb5499ac3dbdafa701ad1b8.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.268910s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.269148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001389s ]
+
+[ 2016-10-22T09:53:20+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Index/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 32 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 33 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 34 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 35 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 36 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099167s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000934s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001024s ]
+
+[ 2016-10-22T09:53:20+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Tools/Index.html?action=get_navigation_list&time=0.8136592348958975
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010191s ]
+NOTIC: [8] Use of undefined constant context - assumed 'context' E:\wamp64\www\aiyue\Apps\MomuAdmin\Action\ToolsAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `m_navigation` [ RunTime:0.0187s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=0 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0150s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=90 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=91 and is_lock=0 )  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=142 and is_lock=0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=142 and is_lock=0 )  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: html E:\wamp64\www\aiyue\Apps\MomuAdmin\Action\ToolsAction.class.php 第 65 行.
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=92 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=93 and is_lock=0 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=96 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=97 and is_lock=0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=3 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=36 and is_lock=0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=37 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=38 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=39 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=40 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=41 and is_lock=0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=42 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=43 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=44 and is_lock=0 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=45 and is_lock=0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=46 and is_lock=0 )  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=47 and is_lock=0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=48 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=49 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=50 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=4 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=9 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=10 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=13 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=15 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=16 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=17 and is_lock=0 )  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=20 and is_lock=0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=5 and is_lock=0 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=6 and is_lock=0 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001247s ]
+
+[ 2016-10-22T09:53:45+08:00 ] 127.0.0.1 /index.php/MomuAdmin/News/article_list/channel_id/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+SQL: SHOW COLUMNS FROM `m_search_field` [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `m_search_field` [ RunTime:0.0006s ]
+SQL: SELECT aaf.name,aaf.title FROM m_search_field sf INNER JOIN m_article_attribute_field aaf on sf.field_id=aaf.id  WHERE sf.channel_id = '24' ORDER BY aaf.sort_id desc  [ RunTime:0.0798s ]
+SQL: SHOW COLUMNS FROM `m_news_field` [ RunTime:0.0178s ]
+SQL: SHOW COLUMNS FROM `m_news_field` [ RunTime:0.0013s ]
+SQL: SELECT aaf.name,aaf.title FROM m_news_field nf INNER JOIN m_article_attribute_field aaf on nf.field_id=aaf.id  WHERE nf.channel_id = '24' ORDER BY aaf.sort_id desc  [ RunTime:0.0271s ]
+SQL: SHOW COLUMNS FROM `m_news_value` [ RunTime:0.0157s ]
+SQL: SHOW COLUMNS FROM `m_news_value` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_news_value` WHERE `channel_id` = 24 LIMIT 1   [ RunTime:0.0245s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_news_value` WHERE `channel_id` = 24 ORDER BY id desc LIMIT 0,15   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `m_news_category` [ RunTime:0.0168s ]
+SQL: SHOW COLUMNS FROM `m_news_category` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`title` FROM `m_news_category` WHERE `channel_id` = 24 AND `parent_id` = 0 ORDER BY sort_id asc  [ RunTime:0.0065s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 52 行.
+NOTIC: [8] Undefined index: ddlCategoryId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 53 行.
+NOTIC: [8] Undefined index: startt E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 54 行.
+NOTIC: [8] Undefined index: deadlinet E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 55 行.
+NOTIC: [8] Undefined index: ddlProperty E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 114 行.
+NOTIC: [8] Undefined index: ddlProperty E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 115 行.
+NOTIC: [8] Undefined index: ddlProperty E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 116 行.
+NOTIC: [8] Undefined index: ddlProperty E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 117 行.
+NOTIC: [8] Undefined index: ddlProperty E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 118 行.
+NOTIC: [8] Undefined index: startt E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 124 行.
+NOTIC: [8] Undefined index: deadlinet E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 125 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\d73855e6c653982bc4d4006e8c902f4e.php 第 131 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.174585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.174854s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002198s ]
+
+[ 2016-10-22T09:54:08+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0017s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0007s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0315s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.204039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.204326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001219s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001540s ]
+
+[ 2016-10-22T09:54:24+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_audit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0008s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+NOTIC: [8] Trying to get property of non-object E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 31 行.
+NOTIC: [8] Trying to get property of non-object E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 31 行.
+SQL: SELECT * FROM `m_users` WHERE `status` = 2 ORDER BY reg_time desc  [ RunTime:0.0004s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` WHERE `status` = 2 ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\23730836d18eb2d0f5eafa9097f51c40.php 第 23 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\23730836d18eb2d0f5eafa9097f51c40.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2016-10-22T09:54:27+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0010s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0006s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.110036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.110179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001110s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001310s ]
+
+[ 2016-10-22T09:55:20+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_edit/id/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001051s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0009s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.133498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001633s ]
+
+[ 2016-10-22T14:46:39+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000139s ]
+INFO: [ app_init ] --END-- [ RunTime:0.203511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036924s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:1.3842s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0022s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.2024s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0571s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0421s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.030602s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.031022s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.3593s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:2.082855s ]
+INFO: [ view_parse ] --END-- [ RunTime:2.083374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.088720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.089228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.150313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.150738s ]
+
+[ 2016-10-22T14:46:40+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000131s ]
+INFO: [ app_init ] --END-- [ RunTime:0.206414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.038548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038915s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0010s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0008s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000410s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.204463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.204680s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001350s ]
+
+[ 2016-10-22T14:46:40+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000141s ]
+INFO: [ app_init ] --END-- [ RunTime:0.203016s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037043s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0010s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0006s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.097078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001675s ]
+
+[ 2016-10-22T14:46:40+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000219s ]
+INFO: [ app_init ] --END-- [ RunTime:0.202872s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040315s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0007s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0005s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.264174s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.264320s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001129s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001397s ]
+
+[ 2016-10-22T14:46:40+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000130s ]
+INFO: [ app_init ] --END-- [ RunTime:0.203953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.039259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039617s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0009s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0005s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100331s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001185s ]
+
+[ 2016-10-22T14:46:41+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000131s ]
+INFO: [ app_init ] --END-- [ RunTime:0.203260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.035667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036035s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0012s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0007s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.097669s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097815s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000913s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001140s ]
+
+[ 2016-10-22T14:46:41+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000174s ]
+INFO: [ app_init ] --END-- [ RunTime:0.206068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.037070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037589s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0008s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0004s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000322s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.171001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.171148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001111s ]
+
+[ 2016-10-22T14:46:41+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000129s ]
+INFO: [ app_init ] --END-- [ RunTime:0.204524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.038582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038997s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0007s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0006s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.208619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.208771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001262s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001525s ]
+
+[ 2016-10-22T14:46:41+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000129s ]
+INFO: [ app_init ] --END-- [ RunTime:0.206662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.038853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039144s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0008s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0005s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.393704s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.393846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001108s ]
+
+[ 2016-10-22T14:49:03+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_edit/id/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019756s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0021s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000387s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000784s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.583354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.583749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002833s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003555s ]
+
+[ 2016-10-22T15:36:19+08:00 ] 127.0.0.1 /index.php/MomuAdmin/UploadJson/uploadImg.html?action=UpLoadFile&DelFilePath=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001313s ]
+
+[ 2016-10-22T16:48:54+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Index/LoginIndex.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012208s ]
+SQL: SHOW COLUMNS FROM `m_manager` [ RunTime:0.0835s ]
+SQL: SELECT * FROM `m_manager` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8] Undefined index: managerrole E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\aa1881ccbdb5499ac3dbdafa701ad1b8.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.522015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.522277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001730s ]
+
+[ 2016-10-22T16:48:58+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Index/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001221s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 32 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 33 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 34 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 35 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 36 行.
+NOTIC: [8] Undefined variable: uploadSetValue E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\3c2526ec326847e91cf016af4afdfd9f.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.355909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.356134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000878s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001352s ]
+
+[ 2016-10-22T16:48:59+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Tools/Index.html?action=get_navigation_list&time=0.543417722641352
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+NOTIC: [8] Use of undefined constant context - assumed 'context' E:\wamp64\www\aiyue\Apps\MomuAdmin\Action\ToolsAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `m_navigation` [ RunTime:0.0399s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=0 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=90 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=91 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=142 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=142 and is_lock=0 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: html E:\wamp64\www\aiyue\Apps\MomuAdmin\Action\ToolsAction.class.php 第 65 行.
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=92 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=93 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=96 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=97 and is_lock=0 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=3 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=36 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=37 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=38 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=39 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=40 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=41 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=42 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=43 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=44 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=45 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=46 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=47 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=48 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=49 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=50 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=4 and is_lock=0 ) ORDER BY sort_id asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=9 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=10 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=13 and is_lock=0 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=15 and is_lock=0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=16 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=17 and is_lock=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=20 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=5 and is_lock=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `m_navigation` WHERE ( parent_id=6 and is_lock=0 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001650s ]
+
+[ 2016-10-22T16:49:01+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001361s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0008s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0005s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0304s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.513968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.514138s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001486s ]
+
+[ 2016-10-22T16:49:20+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_edit/id/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0010s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000265s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000493s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.294849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.295010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001750s ]
+
+[ 2016-10-22T17:18:10+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.047059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.047379s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0494s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0021s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0183s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0462s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0114s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000536s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000903s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.299121s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.299451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.041248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041476s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015158s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015474s ]
+
+[ 2016-10-22T17:18:11+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000107s ]
+INFO: [ app_init ] --END-- [ RunTime:0.025128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.047053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.047324s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.1372s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0020s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc  [ RunTime:0.0013s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0165s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0214s ]
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0380s ]
+SQL: SELECT `id`,`title` FROM `m_user_groups` ORDER BY id asc  [ RunTime:0.0209s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000396s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 104 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 105 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: ddlGroupId E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 157 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\5ebefdf226a9862a4a7001c19ad64070.php 第 164 行.
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.114878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000877s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001095s ]
+
+[ 2016-10-22T17:18:24+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_audit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0158s ]
+SQL: SHOW COLUMNS FROM `m_users` [ RunTime:0.0009s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+NOTIC: [8] Trying to get property of non-object E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 31 行.
+NOTIC: [8] Trying to get property of non-object E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 31 行.
+SQL: SELECT * FROM `m_users` WHERE `status` = 2 ORDER BY reg_time desc  [ RunTime:0.0141s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_users` WHERE `status` = 2 ORDER BY reg_time desc LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\23730836d18eb2d0f5eafa9097f51c40.php 第 23 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\23730836d18eb2d0f5eafa9097f51c40.php 第 71 行.
+SQL: SHOW COLUMNS FROM `m_user_groups` [ RunTime:0.0097s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `title` FROM `m_user_groups` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.238058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.238218s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000918s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000894s ]
+
+[ 2016-10-22T17:31:05+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_config
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001457s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.188421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.188650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001880s ]
+
+[ 2016-10-22T17:31:15+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/sms_template_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.2712s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0125s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` ORDER BY id asc  [ RunTime:0.0142s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` ORDER BY id asc LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000401s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\071f2f605b49b2c62f298e028d60f611.php 第 23 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\071f2f605b49b2c62f298e028d60f611.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.194198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.194366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000650s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000826s ]
+
+[ 2016-10-22T17:31:56+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/sms_template_edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001259s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0243s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0006s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` WHERE `id` = 1 ORDER BY id asc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000305s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099839s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001227s ]
+
+[ 2016-10-22T17:32:18+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_config
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.029042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029211s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000381s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000741s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.118218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002125s ]
+
+[ 2016-10-22T17:33:56+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/sms_template_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0008s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` ORDER BY id asc  [ RunTime:0.0005s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` ORDER BY id asc LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\071f2f605b49b2c62f298e028d60f611.php 第 23 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\071f2f605b49b2c62f298e028d60f611.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018420s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000789s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+
+[ 2016-10-22T17:34:08+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000404s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000992s ]
+
+[ 2016-10-22T17:34:21+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/message_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001351s ]
+SQL: SHOW COLUMNS FROM `m_user_message` [ RunTime:0.1546s ]
+SQL: SHOW COLUMNS FROM `m_user_message` [ RunTime:0.0008s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_user_message` ORDER BY post_time desc  [ RunTime:0.0007s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_user_message` ORDER BY post_time desc LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 23 行.
+NOTIC: [8] Undefined index: ddlType E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 24 行.
+NOTIC: [8] Undefined index: ddlType E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 74 行.
+NOTIC: [8] Undefined index: ddlType E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 75 行.
+NOTIC: [8] Undefined index: ddlType E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 76 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 82 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+NOTIC: [8] Undefined index: mobile E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\a2dcade97c07e2f0f8e8ddbf2e5d4a29.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.160073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.160243s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002666s ]
+
+[ 2016-10-22T17:34:37+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000952s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009446s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000939s ]
+
+[ 2016-10-22T17:34:55+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001383s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020113s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2016-10-22T17:39:30+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001449s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039328s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039615s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002341s ]
+
+[ 2016-10-22T17:39:44+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008828s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000967s ]
+
+[ 2016-10-22T17:40:05+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001006s ]
+
+[ 2016-10-22T17:42:00+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001309s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001251s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001445s ]
+
+[ 2016-10-22T17:42:41+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001263s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000784s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000933s ]
+
+[ 2016-10-22T17:42:49+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010388s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000993s ]
+
+[ 2016-10-22T17:45:58+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/userSms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001945s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000727s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081084s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001014s ]
+
+[ 2016-10-22T17:55:25+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_config
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012996s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000323s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.234559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.234733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.022388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.045312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.045640s ]
+
+[ 2016-10-22T17:55:58+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/sms_template_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001140s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0512s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0104s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` ORDER BY id asc  [ RunTime:0.0006s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` ORDER BY id asc LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\071f2f605b49b2c62f298e028d60f611.php 第 23 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\071f2f605b49b2c62f298e028d60f611.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001058s ]
+
+[ 2016-10-22T17:56:04+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/sms_template_edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.1965s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0006s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` WHERE `id` = 1 ORDER BY id asc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000630s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.259233s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.259530s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001763s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002312s ]
+
+[ 2016-10-22T17:56:13+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/sms_template_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `m_sms_template` [ RunTime:0.0005s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` ORDER BY id asc  [ RunTime:0.0004s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_sms_template` ORDER BY id asc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\071f2f605b49b2c62f298e028d60f611.php 第 23 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\071f2f605b49b2c62f298e028d60f611.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000904s ]
+
+[ 2016-10-22T17:56:22+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/mail_template_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `m_mail_template` [ RunTime:0.1827s ]
+SQL: SHOW COLUMNS FROM `m_mail_template` [ RunTime:0.0091s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_mail_template` ORDER BY id asc  [ RunTime:0.0004s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_mail_template` ORDER BY id asc LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000291s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\1a0796c0a107f2381cf6dd8919c2cdf1.php 第 23 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\1a0796c0a107f2381cf6dd8919c2cdf1.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.203918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.204080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002459s ]
+
+[ 2016-10-22T17:56:28+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/oauth_app_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000098s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001040s ]
+SQL: SHOW COLUMNS FROM `m_user_oauth_app` [ RunTime:0.1027s ]
+SQL: SHOW COLUMNS FROM `m_user_oauth_app` [ RunTime:0.0072s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_user_oauth_app` ORDER BY id asc  [ RunTime:0.0005s ]
+NOTIC: [2] implode(): Invalid arguments passed E:\wamp64\www\aiyue\Apps\MomuAdmin\Model\CommonModel.class.php 第 19 行.
+SQL: SELECT * FROM `m_user_oauth_app` ORDER BY id asc LIMIT 0,15   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\f140db5841113c821554581a15a3fc32.php 第 23 行.
+NOTIC: [8] Undefined index: txtKeywords E:\wamp64\www\aiyue\Apps\Runtime\Cache\MomuAdmin\f140db5841113c821554581a15a3fc32.php 第 73 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.142515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.142684s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001872s ]
+
+[ 2016-10-22T17:56:35+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_config
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000377s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001838s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002161s ]
+
+[ 2016-10-22T17:56:58+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Users/user_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025085s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000980s ]
+
+[ 2016-10-22T17:57:06+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Settings/sys_config
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001308s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000308s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000486s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.207582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.207786s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001835s ]
+
+[ 2016-10-22T17:57:08+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Settings/sys_config
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001156s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001405s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000417s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000668s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063583s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001159s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001396s ]
+
+[ 2016-10-22T17:57:52+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Settings/sys_config
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000452s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000734s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002448s ]
+
+[ 2016-10-22T17:57:55+08:00 ] 127.0.0.1 /index.php/MomuAdmin/Settings/sys_config
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000417s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068786s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001154s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001406s ]
+

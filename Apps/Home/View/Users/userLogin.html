@@ -1,0 +1,93 @@
+
+
+<div class="login-reg-wrap">
+  <div class="login-reg-box">
+      <div class="reg-box">
+         <div class="reg-main">
+         <p class="info">账号登录</p>
+         <div class="each-input icon-1">
+          <div class="input-box"><input type="text" id="userName" class="input" placeholder="输入用户名或手机号" 
+          value="<empty name='Think.cookie.username'><else />{{$Think.cookie.username}}</empty>" ></div>
+          
+         </div>
+         <div class="each-input icon-2">
+          <div class="input-box"><input type="password" id="password" class="input" placeholder="密码" ></div>
+           
+         </div>
+         <div class="each-input icon-3">
+          <div class="input-box">
+          <input type="text" id="verify" class="input" placeholder="验证码">
+          <div class="auth-code"><a href="javascript:verify();"><img id="verifyImg" src="{{:U('Home/Common/verify')}}"></a></div>
+          <a href="javascript:verify();" class="btn">换一张</a>
+          </div>
+          
+         </div>
+         <div class="zddl">
+         <a href="{{:U('Users/forgetPassword')}}" class="forget-info">忘记密码？</a>
+         <input type="checkbox" class="ck">下次自动登录
+         </div>
+         <button type="button" class="dl-btn" onclick="goLogin();">立即登录</button>
+         <div class="third-party-dl">
+          <a href="#" class="qt">免费注册</a>
+          <a href="#" class="wb">微博登陆</a>
+          <a href="#" class="qq">QQ登录</a>
+         </div>
+         </div>
+      </div>
+    <img src="__PUBLIC__/Home/images2/reg-icon.jpg" class="bg">
+  </div>
+</div>
+</div>
+
+
+
+
+<script>
+    /**验证码更换**/
+    function verify(){
+        var time = new Date().getTime();
+        document.getElementById('verifyImg').src="{{:U('Home/Common/verify')}}?"+time;
+    }
+    function goLogin(){
+        var userName=$("#userName").val();
+        var password=$("#password").val();
+        var verify=$("#verify").val();
+        var remember =$("input[type='checkbox']").is(':checked');
+
+        if(userName==""){layer.tips('帐号不能为空', '#userName');return false}
+        if(password==""){layer.tips('密码不能为空', '#password');return false}
+        if(verify==""){
+            layer.tips('验证码错误', '#verify', {
+                tips: [1, '#F90'],
+                time: 1000
+            });
+            return false;
+        }
+        $.post("{{:U('Home/Users/userLogin')}}",{userName:userName,password:password,verify:verify,remember:remember},function(data) {
+           
+            if(data.status==1){
+                location.href="{{:U('Home/Index/index')}}";
+            }else if(data.status==-1){
+              //验证码错误
+               layer.tips(data.message, '#verify', {
+                   tips: [1, '#F90'],
+                   time: 1000
+               });
+            }else if(data.status==-2){
+              //用户名或密码错误
+               layer.tips(data.message, '#userName', {
+                   tips: [1, '#F90'],
+                   time: 1000
+               });
+            }else if(data.status==-3){
+              //出版社用户还没有提交资料，跳转到提交资料界面
+              location.href="__CONTROLLER__/tjzl/id/"+data.id+".html"; 
+            }else if(data.status==-4){
+              //出版社已提交资料，正在审核中
+              location.href="{{:U('Home/Users/pressCheck')}}"; 
+            }
+        });
+    }
+</script>
+
+

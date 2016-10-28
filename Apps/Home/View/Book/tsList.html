@@ -1,0 +1,301 @@
+
+  <div class="main gap">
+    <div class="mbx-nav-box"> <a href="#">首页</a><i></i><span class="name">图书</span> <span class="mbx-search">
+      <input type="search" class="input">
+      <button type="button" class="btn"></button>
+      </span> </div>
+    <!--面包屑及搜索导航-->
+    
+    <div class="screening-condition">
+      <dl class="each">
+        <dt><i></i>全部</dt>
+        <dd> <span>中小学配备书目<i>(1408)</i></span> <span>儿童文学 <i>(100)</i></span> <span>其他儿童读物 <i>(50)</i></span> <span>科普/百科 <i>(50)</i></span> <span>励志 <i>(50)</i></span> <span>小说 <i>(50)</i></span> <span>中国史<i>(50)</i></span> <span>管理<i>(50)</i></span> <span>中小学配备书目<i>(1408)</i></span> <span>儿童文学 <i>(100)</i></span> <span>小说 <i>(50)</i></span> <span>中国史<i>(50)</i></span> <span>管理<i>(50)</i></span> </dd>
+      </dl>
+      <dl class="each">
+        <dt><i></i>作者</dt>
+        <dd> <span>中国大陆</span> <span>美国</span> <span>英国</span> <span>日本</span> <span>法国</span> <span>德国</span> <span>韩国</span> </dd>
+      </dl>
+      <dl class="each">
+        <dt><i></i>年龄</dt>
+        <dd> <span>0-3周岁</span> <span>3-6周岁</span> <span>6-12周岁</span> <span>12周岁以上</span> </dd>
+      </dl>
+      <dl class="each">
+        <dt><i></i>筛选条件：</dt>
+        <dd> <span class="close">文学 <em></em></span> <span class="close">作者：中国大陆<em></em></span> <span class="close">年龄：6-12周岁<em></em></span> </dd>
+      </dl>
+    </div>
+    <!--筛选条件-->
+    <div class="screening-condition1 clearfix"> <span class="cur">收藏<i></i></span> <span class="line">浏览<i></i></span> <span>点击<i></i></span> </div>
+    <div class="booklist-two">
+      <ul class="list">
+      <foreach name="book" item="vo">
+
+        <li class="selected-blue">
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="{{$vo.book_cover}}" >
+                <div class="mask">
+                  <p><a href="__CONTROLLER__/tsDetail/id/{{$vo.id}}.html">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">{{$vo.book_name}}</h3>
+            <p>{{$vo.book_author}}</p>
+          </div>
+        </li>
+        </foreach>
+
+        
+        <!-- <li class="selected-orange">
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">大屏5个4排表示1页</h3>
+            <p>小屏4个5排表示1页</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">汉字练习/儿童字练习/儿童启字练习/儿童启字练习/儿童启字练习/儿童启字练习/儿童启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">汉字练习/儿童字练习/儿童启字练习/儿童启字练习/儿童启字练习/儿童启字练习/儿童启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                        <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li>
+                <li>
+          <div class="item-main">
+            <div class="pic-wrap">
+              <div class="pic-box"><img src="__PUBLIC__/Home/images2/upload/s-ts-1.jpg">
+                <div class="mask">
+                  <p><a href="{{:U('Book/tsDetail')}}">图书详情</a>/<a href="#">加入书单</a></p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">启蒙天天练</h3>
+            <p>作者：余华</p>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+    <div class="page"> {{$show}}</div>
+  </div>
+</div>
+

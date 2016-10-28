@@ -1,0 +1,50 @@
+<div class="footer">
+<div class="footer-main">
+<p class="f-nav"><a href="#">首页</a>|<a href="#"> 关于我们  </a>|<a href="#">图书</a>|<a href="#">研究 </a>|
+<a href="#">新闻BLOG</a>|
+<a href="#">论坛/奖项 </a>|
+<a href="#">资源库</a>
+</p>
+<p class="other"><span>Copyright ©2015 iread All Rights Reserved</span> 
+<span>designed by : <a href="#">momu</a></span></p>                                  
+</div>
+</div>
+
+
+
+
+
+
+<!-- <script>
+
+    var archtectrue_1 = $('.archtectrue_1');
+    var li = archtectrue_1.find('li');
+    var archtectrue_top = archtectrue_1.offset().top;
+    var js_box = $('.js_box');
+
+    window.onscroll = function () {
+        var st = document.documentElement.scrollTop || document.body.scrollTop;
+        if(st >=archtectrue_top  - 10){
+            archtectrue_1.addClass('fixed')
+
+        }else{
+            archtectrue_1.removeClass('fixed')
+
+        };
+
+
+        for(var i=0;i<js_box.length;i++){
+            if(st  >=$(js_box[i]).offset().top){
+                li.eq(i).addClass('active').siblings().removeClass('active')
+            }
+        }
+    }
+
+    function logout(){
+        $.post("{{:U('Home/Users/logout')}}",function(data){
+            location.reload();
+        })
+    }
+</script> -->
+</body>
+</html>
